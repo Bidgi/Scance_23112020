@@ -63,6 +63,11 @@
     <Compile Include="Model\Compartiments.cs" />
     <Compile Include="Model\Livreurs.cs" />
     <Compile Include="Model\Villes.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Client_Indi.cs" />
+    <Compile Include="Model\Client_Pro.cs" />
+    <Compile Include="Model\Colis.cs" />
+    <Compile Include="Model\Ville.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Box.resx">
