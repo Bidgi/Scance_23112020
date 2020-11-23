@@ -234,7 +234,7 @@
             this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 39;
             // 
-            // Livreur
+            // LivreurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -255,8 +255,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Livreur";
+            this.Name = "LivreurForm";
             this.Text = "Livreur";
+            this.Load += new System.EventHandler(this.LivreurForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

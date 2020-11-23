@@ -43,5 +43,10 @@ namespace Scance_23112020
                 rBtnSemaine.Checked = false;
             }
         }
+
+        private void LivreurForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -163,6 +163,7 @@
             this.cbbBox.Name = "cbbBox";
             this.cbbBox.Size = new System.Drawing.Size(275, 21);
             this.cbbBox.TabIndex = 13;
+            this.cbbBox.SelectedIndexChanged += new System.EventHandler(this.cbbBox_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -207,7 +208,7 @@
             this.button6.Text = "Créer";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // Box
+            // BoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Box";
+            this.Name = "BoxForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Box_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
