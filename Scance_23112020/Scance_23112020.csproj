@@ -84,6 +84,9 @@
     <EmbeddedResource Include="BoxForm.resx">
       <DependentUpon>BoxForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ColisForm.resx">
+      <DependentUpon>ColisForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CompartimentForm.resx">
       <DependentUpon>CompartimentForm.cs</DependentUpon>
     </EmbeddedResource>

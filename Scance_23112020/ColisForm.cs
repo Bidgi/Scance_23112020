@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Device.Location;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,38 +21,64 @@ namespace Scance_23112020
 
         private void buttonLivre_Click(object sender, EventArgs e)
         {
-            buttonGene.Text = "Livré";
+            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            Colis.ReturnColis(idColis).Etat = "Livré";
         }
 
         private void buttonAffecter_Click(object sender, EventArgs e)
         {
-            buttonGene.Text = "Affecter";
+            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            Colis LeColisClient = Colis.ReturnColis(idColis);
+            Client LeClientColis = Colis.ReturnColis(idColis).getLeClient();
+            double plusPetiteDistance = Int32.MaxValue;
+            List<Boxs> lesBoxsPresClient = Boxs.getBoxsTrieesDistance(LeClientColis);
+            foreach (Boxs laBoxeLaPlusProche in lesBoxsPresClient)
+            {
+                foreach (Compartiments unCompa in laBoxeLaPlusProche.LesCompartiment)
+                {
+                    if (unCompa.LesColis[0].LeClient == LeClientColis)
+                    {
+                        int volumeTotal = 0;
+                        foreach (Colis unColis in unCompa.LesColis)
+                        {
+                            if (unColis.getLeVolume() == "Gros")
+                            {
+                                volumeTotal += 2;
+                            }
+                            else volumeTotal++;
+                        }
+                        if (LeColisClient.getLeVolume() == "Gros") volumeTotal += 2;
+                        else volumeTotal++;
+                        if (volumeTotal <= 4)
+                        {
+                            unCompa.LesColis.Add(LeColisClient);
+                            LeColisClient.Etat = "Affecté";
+                            textBox.Text = laBoxeLaPlusProche.getLAdresse();
+                            textCompartiment.Text = "X= " + unCompa.PositionX + " Y= " + unCompa.PositionY;
+                            foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
+                            {
+                                foreach(KeyValuePair<DateTime,Boxs> uneLivraison in unLivreur.getLivraison())
+                                {
+                                    if (uneLivraison.Key == DateTime.Now)
+                                    {
+                                        if (uneLivraison.Value == laBoxeLaPlusProche)
+                                        {
+                                            textLivreur.Text = unLivreur.Nom;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void buttonNAffecter_Click(object sender, EventArgs e)
         {
-            buttonGene.Text = "Désaffecter";
+            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            Colis.ReturnColis(idColis).Etat = "Non Affecté";
         }
-
-        private void buttonGene_Click(object sender, EventArgs e)
-        {
-            if (buttonGene.Text == "Livré") 
-            {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
-                Colis.ReturnColis(idColis).Etat = "Livré";
-            }
-            if (buttonGene.Text == "Désaffecter")
-            {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
-                Colis.ReturnColis(idColis).Etat = "Non Affecté";
-            }
-            else
-            {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
-                
-            }
-        }
-
         private void ColisForm_Load(object sender, EventArgs e)
         {
             DataTable data = new DataTable();

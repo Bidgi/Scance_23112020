@@ -28,6 +28,7 @@ namespace Scance_23112020.Model
             CollClassBox.Add(this);
             DictionnaireBoxs.Add(this, Id);
         }
+        public Boxs() { }
         #endregion
 
         #region Getters-Setters
@@ -38,6 +39,21 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        public GeoCoordinate getGPS() { return _gps; }
+        public string getLAdresse() { return _adresse; }
+        public static List<Boxs> getBoxsTrieesDistance(Client unClient)
+        {
+            List<List<object>> LaListe=new List<List<object>>();
+            foreach (Boxs uneBoxe in CollClassBox)
+                LaListe.Add(new List<object>(){ uneBoxe, uneBoxe.getGPS().GetDistanceTo(unClient.getGPS()) });
+            LaListe.OrderBy(o => o.ElementAt(1));
+            List<Boxs> LaListeBox = new List<Boxs>();
+            foreach (List<object> uneListe in LaListe)
+            {
+                LaListeBox.Add((Boxs)uneListe.ElementAt(0));
+            }
+            return LaListeBox;
+        }
         #endregion
     }
 }
