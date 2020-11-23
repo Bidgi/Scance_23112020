@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Ville
+    public class Ville
     {
         #region Attributs
         private string _id;
