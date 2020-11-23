@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    public class Boxs
+    public class Boxs // raoul 
     {
         #region Attributs
         public static Dictionary<Boxs, string> DictionnaireBoxs = new Dictionary<Boxs, string>();

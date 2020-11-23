@@ -90,6 +90,9 @@
     <EmbeddedResource Include="CompartimentForm.resx">
       <DependentUpon>CompartimentForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LivreurForm.resx">
+      <DependentUpon>LivreurForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

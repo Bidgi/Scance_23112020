@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    public class Livreurs
+    public class Livreurs // raoul 
     {
         #region Attributs
         public static List<Livreurs> CollClassLivreur = new List<Livreurs>();

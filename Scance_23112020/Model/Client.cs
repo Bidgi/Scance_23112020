@@ -24,9 +24,9 @@ namespace Scance_23112020.Model
         public Client()
         {
         }
-        public Client(int uneId,string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS)
+        public Client(int unId,string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS)
         {
-            Id = uneId;
+            Id = unId;
             Nom = unNom;
             Prenom = unPrenom;
             Adresse = uneAdresse;
