@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Compartiment
+    public class Compartiments
     {
         #region Attributs
-        public static List<Compartiment> COllClassCompartiment = new List<Compartiment>();
+        public static List<Compartiments> CollClassCompartiment = new List<Compartiments>();
         private string _positionX;
         private string _positionY;
         private int _volume;
@@ -17,13 +17,13 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Compartiment(string positionX, string positionY, int volume)
+        public Compartiments(string positionX, string positionY, int volume)
         {
             PositionX = positionX;
             PositionY = positionY;
             Volume = volume;
             LesColis = new List<Colis>();
-            COllClassCompartiment.Add(this);
+            CollClassCompartiment.Add(this);
         }
         #endregion
 

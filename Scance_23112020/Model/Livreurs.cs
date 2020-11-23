@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Livreur
+    public class Livreurs
     {
         #region Attributs
-        public static List<Livreur> CollClassLivreur = new List<Livreur>();
+        public static List<Livreurs> CollClassLivreur = new List<Livreurs>();
         private string _id;
         private string _nom;
         #endregion
 
         #region Constructeur
-        public Livreur(string id, string nom)
+        public Livreurs(string id, string nom)
         {
             Id = id;
             Nom = nom;

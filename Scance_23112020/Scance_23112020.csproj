@@ -47,20 +47,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Box.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Box.Designer.cs">
+      <DependentUpon>Box.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Box.cs" />
-    <Compile Include="Model\Compartiment.cs" />
-    <Compile Include="Model\Livreur.cs" />
-    <Compile Include="Model\Ville.cs" />
+    <Compile Include="Compartiment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Compartiment.Designer.cs">
+      <DependentUpon>Compartiment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Boxs.cs" />
+    <Compile Include="Model\Compartiments.cs" />
+    <Compile Include="Model\Livreurs.cs" />
+    <Compile Include="Model\Villes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Box.resx">
+      <DependentUpon>Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Compartiment.resx">
+      <DependentUpon>Compartiment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

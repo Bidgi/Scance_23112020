@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Box
+    public class Boxs
     {
         #region Attributs
-        public static List<Box> CollClassBox = new List<Box>();
+        public static List<Boxs> CollClassBox = new List<Boxs>();
+        private Dictionary<DateTime, Livreurs> Livraison = new Dictionary<DateTime, Livreurs>();
         private string _id;
         private string _adresse;
         private GeoCoordinate _gps;
-        private List<Compartiment> _lesCompartiment;
+        private List<Compartiments> _lesCompartiment;
         #endregion
 
         #region Constructeur
-        public Box(string id, string adresse, GeoCoordinate gps, List<Compartiment> lesCompartiment)
+        public Boxs(string id, string adresse, GeoCoordinate gps, List<Compartiments> lesCompartiment)
         {
             Id = id;
             Adresse = adresse;
@@ -32,10 +33,11 @@ namespace Scance_23112020.Model
         public string Id { get => _id; set => _id = value; }
         public string Adresse { get => _adresse; set => _adresse = value; }
         public GeoCoordinate Gps { get => _gps; set => _gps = value; }
-        internal List<Compartiment> LesCompartiment { get => _lesCompartiment; set => _lesCompartiment = value; }
+        internal List<Compartiments> LesCompartiment { get => _lesCompartiment; set => _lesCompartiment = value; }
         #endregion
 
         #region Méthodes
+        public void 
         #endregion
     }
 }
