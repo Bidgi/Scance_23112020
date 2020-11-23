@@ -10,6 +10,7 @@ namespace Scance_23112020.Model
     public class Boxs
     {
         #region Attributs
+        public static Dictionary<Boxs, string> DictionnaireBoxs = new Dictionary<Boxs, string>();
         public static List<Boxs> CollClassBox = new List<Boxs>();
         private string _id;
         private string _adresse;
@@ -25,6 +26,7 @@ namespace Scance_23112020.Model
             Gps = gps;
             LesCompartiment = lesCompartiment;
             CollClassBox.Add(this);
+            DictionnaireBoxs.Add(this, Id);
         }
         #endregion
 
