@@ -37,7 +37,6 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
-        public void 
         #endregion
     }
 }

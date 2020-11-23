@@ -53,6 +53,12 @@
     <Compile Include="Box.Designer.cs">
       <DependentUpon>Box.cs</DependentUpon>
     </Compile>
+    <Compile Include="ColisForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ColisForm.Designer.cs">
+      <DependentUpon>ColisForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Compartiment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,11 +73,13 @@
     <Compile Include="Model\Client_Indi.cs" />
     <Compile Include="Model\Client_Pro.cs" />
     <Compile Include="Model\Colis.cs" />
-    <Compile Include="Model\Ville.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Box.resx">
       <DependentUpon>Box.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ColisForm.resx">
+      <DependentUpon>ColisForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compartiment.resx">
       <DependentUpon>Compartiment.cs</DependentUpon>

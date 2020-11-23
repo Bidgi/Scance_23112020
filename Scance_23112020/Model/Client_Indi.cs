@@ -14,7 +14,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeurs
-        public Client_Indi(int uneId, string unNom, string unPrenom, string uneAdresse, Ville uneVille, int unCP, GeoCoordinate unGPS, int nbrCoupon) : base(uneId, unNom, unPrenom, uneAdresse, uneVille, unCP, unGPS)
+        public Client_Indi(int uneId, string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS, int nbrCoupon) : base(uneId, unNom, unPrenom, uneAdresse, uneVille, unCP, unGPS)
         {
             Coupon = nbrCoupon;
         }
