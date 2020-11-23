@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Scance_23112020
 {
-    public partial class CompartimentForm : Form
+    public partial class CompartimentForm : Form // raoul 
     {
         public CompartimentForm()
         {

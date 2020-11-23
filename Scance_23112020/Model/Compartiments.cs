@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    public class Compartiments
+    public class Compartiments // raoul 
     {
         #region Attributs
         public static List<Compartiments> CollClassCompartiment = new List<Compartiments>();
@@ -33,6 +33,10 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        /// <summary>
+        /// Permet d'ajourter le colis en paramettre au compartiment
+        /// </summary>
+        /// <param name="colis"> le colis </param>
         public void AddColis(Colis colis)
         {
             this.LesColis.Add(colis);

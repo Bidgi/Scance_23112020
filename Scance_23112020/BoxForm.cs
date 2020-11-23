@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Scance_23112020
 {
-    public partial class BoxForm : Form
+    public partial class BoxForm : Form // raoul
     {
         internal static Compartiments leCompartiment;
         public BoxForm()
@@ -23,7 +23,8 @@ namespace Scance_23112020
         {
             Boxs b1 = new Boxs("1", " 4rue ", new GeoCoordinate(), new List<Compartiments>() {new Compartiments("5","9"), new Compartiments("4","8") });
             Boxs b2 = new Boxs("2", " 6rue ", new GeoCoordinate(), new List<Compartiments>() { });
-            new Colis("de", "gros", new Client(1, "girardin", "raoul", "4 rue de l'argoat", new Villes("1", "pléhédel", 22290, new List<Boxs>() { b1, b2 }), 22290, new GeoCoordinate()));
+            Colis c1 = new Colis("de", "gros", new Client(1, "girardin", "raoul", "4 rue de l'argoat", new Villes("1", "pléhédel", 22290, new List<Boxs>() { b1, b2 }), 22290, new GeoCoordinate()));
+            b1.LesCompartiment.ElementAt(0).AddColis(c1);
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
@@ -57,6 +58,7 @@ namespace Scance_23112020
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
+            // marche pas
             try
             {
                 for (int i = 0; i < dataGridView1.Rows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Empty;
@@ -73,7 +75,6 @@ namespace Scance_23112020
                         leCompartiment = unCompartiment;
             CompartimentForm compartimentForm = new CompartimentForm();
             compartimentForm.Show();
-            this.Close();
         }
     }
 }
