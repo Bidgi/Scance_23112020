@@ -6,32 +6,26 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Ville
+    class Livreur
     {
         #region Attributs
-        public static List<Ville> CollClassVille = new List<Ville>();
+        public static List<Livreur> CollClassLivreur = new List<Livreur>();
         private string _id;
         private string _nom;
-        private int _codepostal;
-        private List<Box> _lesBox;
         #endregion
 
         #region Constructeur
-        public Ville(string id, string nom, int codepostal, List<Box> lesBox)
+        public Livreur(string id, string nom)
         {
             Id = id;
             Nom = nom;
-            Codepostal = codepostal;
-            LesBox = lesBox;
-            CollClassVille.Add(this);
+            CollClassLivreur.Add(this);
         }
         #endregion
 
         #region Getters-Setters
         public string Id { get => _id; set => _id = value; }
         public string Nom { get => _nom; set => _nom = value; }
-        public int Codepostal { get => _codepostal; set => _codepostal = value; }
-        internal List<Box> LesBox { get => _lesBox; set => _lesBox = value; }
         #endregion
 
         #region Méthodes
