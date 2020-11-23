@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Client_Indi : Client
+    public class Client_Indi : Client
     {
         #region Attributs
         private int _coupon;
         #endregion
 
         #region Constructeurs
-        public Client_Indi(int uneId, string unNom, string unPrenom, string uneAdresse, Ville uneVille, int unCP, GeoCoordinate unGPS, int nbrCoupon) : base(uneId, unNom, unPrenom, uneAdresse, uneVille, unCP, unGPS)
+        public Client_Indi(int uneId, string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS, int nbrCoupon) : base(uneId, unNom, unPrenom, uneAdresse, uneVille, unCP, unGPS)
         {
             Coupon = nbrCoupon;
         }
@@ -26,7 +26,5 @@ namespace Scance_23112020.Model
 
         #region Methodes
         #endregion
-
-
     }
 }

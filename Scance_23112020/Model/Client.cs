@@ -14,7 +14,7 @@ namespace Scance_23112020.Model
         private string _nom;
         private string _prenom;
         private string _adresse;
-        private Ville _ville;
+        private Villes _ville;
         private int _cp;
         private GeoCoordinate _gps;
         public static List<Client> CollLesClients = new List<Client>();
@@ -24,7 +24,7 @@ namespace Scance_23112020.Model
         public Client()
         {
         }
-        public Client(int uneId,string unNom, string unPrenom, string uneAdresse, Ville uneVille, int unCP, GeoCoordinate unGPS)
+        public Client(int uneId,string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS)
         {
             Id = uneId;
             Nom = unNom;
@@ -42,7 +42,7 @@ namespace Scance_23112020.Model
         public string Nom { get => _nom; set => _nom = value; }
         public string Prenom { get => _prenom; set => _prenom = value; }
         public string Adresse { get => _adresse; set => _adresse = value; }
-        public Ville Ville { get => _ville; set => _ville = value; }
+        public Villes Ville { get => _ville; set => _ville = value; }
         public int CP { get => _cp; set => _cp = value; }
         public GeoCoordinate GPS { get => _gps; set => _gps = value; }
         #endregion

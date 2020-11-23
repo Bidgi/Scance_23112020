@@ -10,6 +10,7 @@ namespace Scance_23112020.Model
     {
         #region Attributs
         public static List<Livreurs> CollClassLivreur = new List<Livreurs>();
+        private Dictionary<DateTime, Livreurs> Livraison = new Dictionary<DateTime, Livreurs>();
         private string _id;
         private string _nom;
         #endregion

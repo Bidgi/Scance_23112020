@@ -1,6 +1,6 @@
 ﻿namespace Scance_23112020
 {
-    partial class Compartiment
+    partial class CompartimentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,20 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cbbCompartiment = new System.Windows.Forms.ComboBox();
             this.txtTauxRemplissage = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // cbbCompartiment
-            // 
-            this.cbbCompartiment.FormattingEnabled = true;
-            this.cbbCompartiment.Location = new System.Drawing.Point(14, 78);
-            this.cbbCompartiment.Name = "cbbCompartiment";
-            this.cbbCompartiment.Size = new System.Drawing.Size(275, 21);
-            this.cbbCompartiment.TabIndex = 30;
-            this.cbbCompartiment.SelectedIndexChanged += new System.EventHandler(this.cbbCompartiment_SelectedIndexChanged);
             // 
             // txtTauxRemplissage
             // 
@@ -75,7 +65,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cbbCompartiment);
             this.Controls.Add(this.txtTauxRemplissage);
             this.Controls.Add(this.label1);
             this.Name = "Compartiment";
@@ -87,8 +76,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ComboBox cbbCompartiment;
         private System.Windows.Forms.TextBox txtTauxRemplissage;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

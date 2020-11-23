@@ -11,7 +11,6 @@ namespace Scance_23112020.Model
     {
         #region Attributs
         public static List<Boxs> CollClassBox = new List<Boxs>();
-        private Dictionary<DateTime, Livreurs> Livraison = new Dictionary<DateTime, Livreurs>();
         private string _id;
         private string _adresse;
         private GeoCoordinate _gps;
@@ -37,7 +36,6 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
-        public void 
         #endregion
     }
 }

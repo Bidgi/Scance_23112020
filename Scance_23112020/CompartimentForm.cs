@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Scance_23112020
 {
-    public partial class Compartiment : Form
+    public partial class CompartimentForm : Form
     {
-        public Compartiment()
+        public CompartimentForm()
         {
             InitializeComponent();
         }
@@ -24,15 +24,19 @@ namespace Scance_23112020
 
         private void cbbCompartiment_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Compartiment compartiment;
+            /*CompartimentForm compartiment;
             foreach (Compartiments unCompartiments in Compartiments.CollClassCompartiment)
             {
-
+                foreach (Colis unColis in unCompartiments.LesColis)
+                {
+                    if (unColis.Volume == "gros") progretion += 50;
+                    else progretion += 25;
+                }
             }
             switch (switch_on)
             {
                 default:
-            }
+            }*/
         }
 
     }

@@ -31,7 +31,7 @@ namespace Scance_23112020.Model
         public string PositionX { get => _positionX; set => _positionX = value; }
         public string PositionY { get => _positionY; set => _positionY = value; }
         public int Volume { get => _volume; set => _volume = value; }
-        public Colis LesColis { get => _lesColis; set => _lesColis = value; }
+        public List<Colis> LesColis { get => _lesColis; set => _lesColis = value; }
 
         #endregion
 
