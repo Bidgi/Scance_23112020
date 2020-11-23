@@ -21,6 +21,8 @@ namespace Scance_23112020
         }
         private void Box_Load(object sender, EventArgs e)
         {
+            new Boxs("1", " 4rue ", new GeoCoordinate(), new List<Compartiments>() {new Compartiments("5","9") });
+            new Boxs("2", " 6rue ", new GeoCoordinate(), new List<Compartiments>() { });
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";

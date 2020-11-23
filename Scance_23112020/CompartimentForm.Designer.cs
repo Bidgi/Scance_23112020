@@ -59,6 +59,7 @@
             // 
             // txtTauxRemplissage
             // 
+            this.txtTauxRemplissage.Enabled = false;
             this.txtTauxRemplissage.Location = new System.Drawing.Point(128, 73);
             this.txtTauxRemplissage.Name = "txtTauxRemplissage";
             this.txtTauxRemplissage.Size = new System.Drawing.Size(57, 20);
@@ -85,6 +86,7 @@
             // 
             // txtNombreColis
             // 
+            this.txtNombreColis.Enabled = false;
             this.txtNombreColis.Location = new System.Drawing.Point(128, 99);
             this.txtNombreColis.Name = "txtNombreColis";
             this.txtNombreColis.Size = new System.Drawing.Size(100, 20);
@@ -92,6 +94,7 @@
             // 
             // txtNombreGrosColis
             // 
+            this.txtNombreGrosColis.Enabled = false;
             this.txtNombreGrosColis.Location = new System.Drawing.Point(128, 125);
             this.txtNombreGrosColis.Name = "txtNombreGrosColis";
             this.txtNombreGrosColis.Size = new System.Drawing.Size(100, 20);
@@ -99,6 +102,7 @@
             // 
             // txtNombrePetitColis
             // 
+            this.txtNombrePetitColis.Enabled = false;
             this.txtNombrePetitColis.Location = new System.Drawing.Point(128, 151);
             this.txtNombrePetitColis.Name = "txtNombrePetitColis";
             this.txtNombrePetitColis.Size = new System.Drawing.Size(100, 20);
@@ -234,6 +238,7 @@
             // 
             // txtNomClient
             // 
+            this.txtNomClient.Enabled = false;
             this.txtNomClient.Location = new System.Drawing.Point(377, 99);
             this.txtNomClient.Name = "txtNomClient";
             this.txtNomClient.Size = new System.Drawing.Size(76, 20);
@@ -241,6 +246,7 @@
             // 
             // txtPrenomClient
             // 
+            this.txtPrenomClient.Enabled = false;
             this.txtPrenomClient.Location = new System.Drawing.Point(377, 125);
             this.txtPrenomClient.Name = "txtPrenomClient";
             this.txtPrenomClient.Size = new System.Drawing.Size(76, 20);
@@ -248,6 +254,7 @@
             // 
             // txtVilleClient
             // 
+            this.txtVilleClient.Enabled = false;
             this.txtVilleClient.Location = new System.Drawing.Point(377, 151);
             this.txtVilleClient.Name = "txtVilleClient";
             this.txtVilleClient.Size = new System.Drawing.Size(76, 20);
@@ -255,6 +262,7 @@
             // 
             // txtAdresseClient
             // 
+            this.txtAdresseClient.Enabled = false;
             this.txtAdresseClient.Location = new System.Drawing.Point(377, 177);
             this.txtAdresseClient.Name = "txtAdresseClient";
             this.txtAdresseClient.Size = new System.Drawing.Size(76, 20);
@@ -262,6 +270,7 @@
             // 
             // txtIdColis
             // 
+            this.txtIdColis.Enabled = false;
             this.txtIdColis.Location = new System.Drawing.Point(128, 270);
             this.txtIdColis.Name = "txtIdColis";
             this.txtIdColis.Size = new System.Drawing.Size(76, 20);
@@ -269,6 +278,7 @@
             // 
             // txtVolumeColis
             // 
+            this.txtVolumeColis.Enabled = false;
             this.txtVolumeColis.Location = new System.Drawing.Point(128, 296);
             this.txtVolumeColis.Name = "txtVolumeColis";
             this.txtVolumeColis.Size = new System.Drawing.Size(76, 20);
@@ -276,6 +286,7 @@
             // 
             // txtEtatColis
             // 
+            this.txtEtatColis.Enabled = false;
             this.txtEtatColis.Location = new System.Drawing.Point(128, 322);
             this.txtEtatColis.Name = "txtEtatColis";
             this.txtEtatColis.Size = new System.Drawing.Size(76, 20);
