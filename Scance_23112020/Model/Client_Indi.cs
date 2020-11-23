@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Scance_23112020.Model
 {
-    class Client_Indi : Client
+    public class Client_Indi : Client
     {
         #region Attributs
         private int _coupon;
@@ -26,7 +26,5 @@ namespace Scance_23112020.Model
 
         #region Methodes
         #endregion
-
-
     }
 }

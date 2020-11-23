@@ -1,6 +1,6 @@
 ﻿namespace Scance_23112020
 {
-    partial class Box
+    partial class BoxForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -40,7 +40,7 @@
             this.btnModifierBox = new System.Windows.Forms.Button();
             this.btnEffacerBox = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbbBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDBox = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
@@ -156,13 +156,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(275, 150);
             this.dataGridView1.TabIndex = 12;
             // 
-            // comboBox2
+            // cbbBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(396, 41);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(275, 21);
-            this.comboBox2.TabIndex = 13;
+            this.cbbBox.FormattingEnabled = true;
+            this.cbbBox.Location = new System.Drawing.Point(396, 41);
+            this.cbbBox.Name = "cbbBox";
+            this.cbbBox.Size = new System.Drawing.Size(275, 21);
+            this.cbbBox.TabIndex = 13;
             // 
             // label6
             // 
@@ -216,7 +216,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cbbBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnEffacerBox);
             this.Controls.Add(this.btnModifierBox);
@@ -253,7 +253,7 @@
         private System.Windows.Forms.Button btnModifierBox;
         private System.Windows.Forms.Button btnEffacerBox;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbbBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDBox;
         private System.Windows.Forms.Button button4;

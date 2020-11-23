@@ -47,11 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Box.cs">
+    <Compile Include="BoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Box.Designer.cs">
-      <DependentUpon>Box.cs</DependentUpon>
+    <Compile Include="BoxForm.Designer.cs">
+      <DependentUpon>BoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ColisForm.cs">
       <SubType>Form</SubType>
@@ -60,10 +60,17 @@
       <DependentUpon>ColisForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Compartiment.cs">
+    <Compile Include="CompartimentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Compartiment.Designer.cs">
-      <DependentUpon>Compartiment.cs</DependentUpon>
+    <Compile Include="CompartimentForm.Designer.cs">
+      <DependentUpon>CompartimentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LivreurForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivreurForm.Designer.cs">
+      <DependentUpon>LivreurForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Boxs.cs" />
     <Compile Include="Model\Compartiments.cs" />
@@ -75,11 +82,11 @@
     <Compile Include="Model\Colis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Box.resx">
-      <DependentUpon>Box.cs</DependentUpon>
+    <EmbeddedResource Include="BoxForm.resx">
+      <DependentUpon>BoxForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ColisForm.resx">
-      <DependentUpon>ColisForm.cs</DependentUpon>
+    <EmbeddedResource Include="CompartimentForm.resx">
+      <DependentUpon>CompartimentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compartiment.resx">
       <DependentUpon>Compartiment.cs</DependentUpon>
