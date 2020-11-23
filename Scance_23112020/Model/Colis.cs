@@ -20,9 +20,9 @@ namespace Scance_23112020.Model
 		public Colis()
         {
         }
-		public Colis(string uneId, string unVolume, Client unClient)
+		public Colis(string unId, string unVolume, Client unClient)
 		{
-			Id = uneId;
+			Id = unId;
 			Volume = unVolume;
 			LeClient = unClient;
 			collLesColis.Add(this);

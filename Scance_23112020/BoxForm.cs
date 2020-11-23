@@ -21,8 +21,9 @@ namespace Scance_23112020
         }
         private void Box_Load(object sender, EventArgs e)
         {
-            new Boxs("1", " 4rue ", new GeoCoordinate(), new List<Compartiments>() {new Compartiments("5","9") });
-            new Boxs("2", " 6rue ", new GeoCoordinate(), new List<Compartiments>() { });
+            Boxs b1 = new Boxs("1", " 4rue ", new GeoCoordinate(), new List<Compartiments>() {new Compartiments("5","9"), new Compartiments("4","8") });
+            Boxs b2 = new Boxs("2", " 6rue ", new GeoCoordinate(), new List<Compartiments>() { });
+            new Colis("de", "gros", new Client(1, "girardin", "raoul", "4 rue de l'argoat", new Villes("1", "pléhédel", 22290, new List<Boxs>() { b1, b2 }), 22290, new GeoCoordinate()));
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
@@ -56,8 +57,12 @@ namespace Scance_23112020
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < dataGridView1.Rows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Empty;
-            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Red;
+            try
+            {
+                for (int i = 0; i < dataGridView1.Rows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Empty;
+                for (int i = 0; i < dataGridView1.SelectedRows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Red;
+            }
+            catch { }
         }
 
         private void btnDetailCompartiment_Click(object sender, EventArgs e)

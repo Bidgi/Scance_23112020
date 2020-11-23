@@ -16,7 +16,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Compartiments(string positionX, string positionY, int volume)
+        public Compartiments(string positionX, string positionY)
         {
             PositionX = positionX;
             PositionY = positionY;
@@ -33,6 +33,10 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        public void AddColis(Colis colis)
+        {
+            this.LesColis.Add(colis);
+        }
         #endregion
     }
 }
