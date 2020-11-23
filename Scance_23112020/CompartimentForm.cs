@@ -19,25 +19,43 @@ namespace Scance_23112020
         }
         private void Compartiment_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void cbbCompartiment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            /*CompartimentForm compartiment;
-            foreach (Compartiments unCompartiments in Compartiments.CollClassCompartiment)
+            txtNombreColis.Text = BoxForm.leCompartiment.LesColis.Count.ToString();
+            int grosColis = 0, petitColis = 0, tauxRemplissage = 0;
+            foreach (Colis unColis in BoxForm.leCompartiment.LesColis)
             {
-                foreach (Colis unColis in unCompartiments.LesColis)
+                cbbColis.Items.Add(unColis.Id);
+                if (unColis.Volume == "gros")
                 {
-                    if (unColis.Volume == "gros") progretion += 50;
-                    else progretion += 25;
+                    tauxRemplissage += 50;
+                    grosColis += 1;
+                }
+                else 
+                {
+                    tauxRemplissage += 25;
+                    petitColis += 1; 
                 }
             }
-            switch (switch_on)
-            {
-                default:
-            }*/
+            txtTauxRemplissage.Text = tauxRemplissage.ToString();
+            txtNombreGrosColis.Text = grosColis.ToString();
+            txtNombrePetitColis.Text = petitColis.ToString();
+            txtNomClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Nom;
+            txtPrenomClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Prenom;
+            txtVilleClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Ville.Nom;
+            txtAdresseClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Adresse;
+            cbbColis.SelectedIndex = 0;
         }
 
+        private void cbbColis_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (Colis unColis in BoxForm.leCompartiment.LesColis)
+            {
+                if (unColis.Id == cbbColis.SelectedItem.ToString())
+                {
+                    txtPrenomClient.Text = unColis.Id;
+                    txtVilleClient.Text = unColis.Volume;
+                    txtAdresseClient.Text = unColis.Etat;
+                }
+            }
+        }
     }
 }

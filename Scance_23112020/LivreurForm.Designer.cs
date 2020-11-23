@@ -33,10 +33,8 @@
             this.btnEffacer = new System.Windows.Forms.Button();
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnCree = new System.Windows.Forms.Button();
-            this.txtPrenom = new System.Windows.Forms.TextBox();
             this.txtNom = new System.Windows.Forms.TextBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,10 +66,11 @@
             this.cbbLivreur.Name = "cbbLivreur";
             this.cbbLivreur.Size = new System.Drawing.Size(275, 21);
             this.cbbLivreur.TabIndex = 31;
+            this.cbbLivreur.SelectedIndexChanged += new System.EventHandler(this.cbbLivreur_SelectedIndexChanged);
             // 
             // btnEffacer
             // 
-            this.btnEffacer.Location = new System.Drawing.Point(206, 236);
+            this.btnEffacer.Location = new System.Drawing.Point(206, 196);
             this.btnEffacer.Name = "btnEffacer";
             this.btnEffacer.Size = new System.Drawing.Size(95, 23);
             this.btnEffacer.TabIndex = 29;
@@ -80,7 +79,7 @@
             // 
             // btnModifier
             // 
-            this.btnModifier.Location = new System.Drawing.Point(116, 236);
+            this.btnModifier.Location = new System.Drawing.Point(116, 196);
             this.btnModifier.Name = "btnModifier";
             this.btnModifier.Size = new System.Drawing.Size(84, 23);
             this.btnModifier.TabIndex = 28;
@@ -89,19 +88,12 @@
             // 
             // btnCree
             // 
-            this.btnCree.Location = new System.Drawing.Point(26, 236);
+            this.btnCree.Location = new System.Drawing.Point(26, 196);
             this.btnCree.Name = "btnCree";
             this.btnCree.Size = new System.Drawing.Size(84, 23);
             this.btnCree.TabIndex = 27;
             this.btnCree.Text = "Créer";
             this.btnCree.UseVisualStyleBackColor = true;
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.Location = new System.Drawing.Point(26, 202);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(119, 20);
-            this.txtPrenom.TabIndex = 25;
             // 
             // txtNom
             // 
@@ -116,15 +108,6 @@
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(119, 20);
             this.txtID.TabIndex = 23;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Prenom :";
             // 
             // label3
             // 
@@ -157,7 +140,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 330);
+            this.dataGridView1.Location = new System.Drawing.Point(26, 290);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(388, 165);
             this.dataGridView1.TabIndex = 33;
@@ -204,7 +187,7 @@
             this.groupBox1.Controls.Add(this.rBtnMois);
             this.groupBox1.Controls.Add(this.rBtnJour);
             this.groupBox1.Controls.Add(this.rBtnSemaine);
-            this.groupBox1.Location = new System.Drawing.Point(26, 282);
+            this.groupBox1.Location = new System.Drawing.Point(26, 242);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(388, 42);
             this.groupBox1.TabIndex = 37;
@@ -217,11 +200,12 @@
             this.dTP.Name = "dTP";
             this.dTP.Size = new System.Drawing.Size(182, 20);
             this.dTP.TabIndex = 40;
+            this.dTP.ValueChanged += new System.EventHandler(this.dTP_ValueChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(258, 504);
+            this.label5.Location = new System.Drawing.Point(258, 464);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 13);
             this.label5.TabIndex = 38;
@@ -229,7 +213,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 501);
+            this.textBox1.Location = new System.Drawing.Point(304, 461);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 39;
@@ -238,7 +222,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 671);
+            this.ClientSize = new System.Drawing.Size(800, 511);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -248,10 +232,8 @@
             this.Controls.Add(this.btnEffacer);
             this.Controls.Add(this.btnModifier);
             this.Controls.Add(this.btnCree);
-            this.Controls.Add(this.txtPrenom);
             this.Controls.Add(this.txtNom);
             this.Controls.Add(this.txtID);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -272,10 +254,8 @@
         private System.Windows.Forms.Button btnEffacer;
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnCree;
-        private System.Windows.Forms.TextBox txtPrenom;
         private System.Windows.Forms.TextBox txtNom;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;

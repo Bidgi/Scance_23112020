@@ -14,6 +14,7 @@ namespace Scance_23112020
 {
     public partial class BoxForm : Form
     {
+        internal static Compartiments leCompartiment;
         public BoxForm()
         {
             InitializeComponent();
@@ -39,23 +40,33 @@ namespace Scance_23112020
         {
 
         }
-
-        private void btnCreeBox_Click(object sender, EventArgs e)
+        private void btnCreeCompartiment_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnModifierBox_Click(object sender, EventArgs e)
+        private void btnModifierCompartiment_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void btnEffacerBox_Click(object sender, EventArgs e)
+        private void btnEffacerCompartiment_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++) dataGridView1.Rows.Remove(dataGridView1.SelectedRows[i]);
+        }
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            for (int i = 0; i < dataGridView1.Rows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Empty;
+            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++) dataGridView1.SelectedRows[i].DefaultCellStyle.BackColor = Color.Red;
         }
 
-        ///////////////////////////////////////////
-
+        private void btnDetailCompartiment_Click(object sender, EventArgs e)
+        {
+            foreach (Boxs Boxs in Boxs.CollClassBox)
+                foreach (Compartiments unCompartiment in Boxs.LesCompartiment)
+                    if(unCompartiment.PositionX == dataGridView1.SelectedRows[0].Cells[0].Value.ToString() && unCompartiment.PositionY == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
+                        leCompartiment = unCompartiment;
+            CompartimentForm compartimentForm = new CompartimentForm();
+            compartimentForm.Show();
+            this.Close();
+        }
     }
 }

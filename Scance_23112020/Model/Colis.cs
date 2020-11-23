@@ -9,7 +9,7 @@ namespace Scance_23112020.Model
     public class Colis
     {
 		#region Attributs
-		private int _id;
+		private string _id;
 		private string _volume;
 		private string _etat;
 		private Client _leClient;
@@ -20,7 +20,7 @@ namespace Scance_23112020.Model
 		public Colis()
         {
         }
-		public Colis(int uneId, string unVolume, Client unClient)
+		public Colis(string uneId, string unVolume, Client unClient)
 		{
 			Id = uneId;
 			Volume = unVolume;
@@ -31,17 +31,17 @@ namespace Scance_23112020.Model
 
 		#region Getters Setters
 		public Client LeClient { get => _leClient; set => _leClient = value; }
-		public int Id { get => _id; set => _id = value; }
+		public string Id { get => _id; set => _id = value; }
 		public string Volume { get => _volume; set => _volume = value; }
 		public string Etat { get => _etat; set => _etat = value; }
 		#endregion
 
 		#region Methodes
 		public Client getLeClient() { return _leClient; }
-		public int getLId() { return _id; }
+		public string getLId() { return _id; }
 		public string getLeVolume() { return _volume; }
 		public string getLetat() { return _etat; }
-		public static Colis ReturnColis(int unId)
+		public static Colis ReturnColis(string unId)
 		{
 			foreach (Colis unColis in collLesColis)
 			{

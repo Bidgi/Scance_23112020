@@ -37,17 +37,17 @@ namespace Scance_23112020
         {
             if (buttonGene.Text == "Livré") 
             {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+                string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
                 Colis.ReturnColis(idColis).Etat = "Livré";
             }
             if (buttonGene.Text == "Désaffecter")
             {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+                string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
                 Colis.ReturnColis(idColis).Etat = "Non Affecté";
             }
             else
             {
-                int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+                string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
                 
             }
         }

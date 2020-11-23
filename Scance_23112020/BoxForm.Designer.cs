@@ -43,9 +43,10 @@
             this.cbbBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDBox = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnEffacerCompartiment = new System.Windows.Forms.Button();
+            this.btnModifierCompartiment = new System.Windows.Forms.Button();
+            this.btnCreeCompartiment = new System.Windows.Forms.Button();
+            this.btnDetailCompartiment = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -126,7 +127,6 @@
             this.btnCreeBox.TabIndex = 9;
             this.btnCreeBox.Text = "Créer";
             this.btnCreeBox.UseVisualStyleBackColor = true;
-            this.btnCreeBox.Click += new System.EventHandler(this.btnCreeBox_Click);
             // 
             // btnModifierBox
             // 
@@ -136,7 +136,6 @@
             this.btnModifierBox.TabIndex = 10;
             this.btnModifierBox.Text = "Modifier";
             this.btnModifierBox.UseVisualStyleBackColor = true;
-            this.btnModifierBox.Click += new System.EventHandler(this.btnModifierBox_Click);
             // 
             // btnEffacerBox
             // 
@@ -146,7 +145,6 @@
             this.btnEffacerBox.TabIndex = 11;
             this.btnEffacerBox.Text = "Effacer";
             this.btnEffacerBox.UseVisualStyleBackColor = true;
-            this.btnEffacerBox.Click += new System.EventHandler(this.btnEffacerBox_Click);
             // 
             // dataGridView1
             // 
@@ -155,6 +153,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(275, 150);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // cbbBox
             // 
@@ -181,41 +180,55 @@
             this.txtIDBox.Size = new System.Drawing.Size(100, 20);
             this.txtIDBox.TabIndex = 5;
             // 
-            // button4
+            // btnEffacerCompartiment
             // 
-            this.button4.Location = new System.Drawing.Point(575, 224);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(95, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Effacer";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnEffacerCompartiment.Location = new System.Drawing.Point(670, 224);
+            this.btnEffacerCompartiment.Name = "btnEffacerCompartiment";
+            this.btnEffacerCompartiment.Size = new System.Drawing.Size(95, 23);
+            this.btnEffacerCompartiment.TabIndex = 17;
+            this.btnEffacerCompartiment.Text = "Effacer";
+            this.btnEffacerCompartiment.UseVisualStyleBackColor = true;
+            this.btnEffacerCompartiment.Click += new System.EventHandler(this.btnEffacerCompartiment_Click);
             // 
-            // button5
+            // btnModifierCompartiment
             // 
-            this.button5.Location = new System.Drawing.Point(485, 224);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 23);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Modifier";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnModifierCompartiment.Location = new System.Drawing.Point(580, 224);
+            this.btnModifierCompartiment.Name = "btnModifierCompartiment";
+            this.btnModifierCompartiment.Size = new System.Drawing.Size(84, 23);
+            this.btnModifierCompartiment.TabIndex = 16;
+            this.btnModifierCompartiment.Text = "Modifier";
+            this.btnModifierCompartiment.UseVisualStyleBackColor = true;
+            this.btnModifierCompartiment.Click += new System.EventHandler(this.btnModifierCompartiment_Click);
             // 
-            // button6
+            // btnCreeCompartiment
             // 
-            this.button6.Location = new System.Drawing.Point(395, 224);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(84, 23);
-            this.button6.TabIndex = 15;
-            this.button6.Text = "Créer";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnCreeCompartiment.Location = new System.Drawing.Point(490, 224);
+            this.btnCreeCompartiment.Name = "btnCreeCompartiment";
+            this.btnCreeCompartiment.Size = new System.Drawing.Size(84, 23);
+            this.btnCreeCompartiment.TabIndex = 15;
+            this.btnCreeCompartiment.Text = "Créer";
+            this.btnCreeCompartiment.UseVisualStyleBackColor = true;
+            this.btnCreeCompartiment.Click += new System.EventHandler(this.btnCreeCompartiment_Click);
+            // 
+            // btnDetailCompartiment
+            // 
+            this.btnDetailCompartiment.Location = new System.Drawing.Point(400, 224);
+            this.btnDetailCompartiment.Name = "btnDetailCompartiment";
+            this.btnDetailCompartiment.Size = new System.Drawing.Size(84, 23);
+            this.btnDetailCompartiment.TabIndex = 18;
+            this.btnDetailCompartiment.Text = "Détaille";
+            this.btnDetailCompartiment.UseVisualStyleBackColor = true;
+            this.btnDetailCompartiment.Click += new System.EventHandler(this.btnDetailCompartiment_Click);
             // 
             // BoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnDetailCompartiment);
+            this.Controls.Add(this.btnEffacerCompartiment);
+            this.Controls.Add(this.btnModifierCompartiment);
+            this.Controls.Add(this.btnCreeCompartiment);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbbBox);
             this.Controls.Add(this.dataGridView1);
@@ -257,9 +270,10 @@
         private System.Windows.Forms.ComboBox cbbBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDBox;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnEffacerCompartiment;
+        private System.Windows.Forms.Button btnModifierCompartiment;
+        private System.Windows.Forms.Button btnCreeCompartiment;
+        private System.Windows.Forms.Button btnDetailCompartiment;
     }
 }
 
