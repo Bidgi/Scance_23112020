@@ -21,13 +21,13 @@ namespace Scance_23112020
 
         private void buttonLivre_Click(object sender, EventArgs e)
         {
-            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
             Colis.ReturnColis(idColis).Etat = "Livré";
         }
 
         private void buttonAffecter_Click(object sender, EventArgs e)
         {
-            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
             Colis LeColisClient = Colis.ReturnColis(idColis);
             Client LeClientColis = Colis.ReturnColis(idColis).getLeClient();
             double plusPetiteDistance = Int32.MaxValue;
@@ -76,7 +76,7 @@ namespace Scance_23112020
 
         private void buttonNAffecter_Click(object sender, EventArgs e)
         {
-            int idColis = int.Parse(dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString());
+            string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
             Colis.ReturnColis(idColis).Etat = "Non Affecté";
         }
         private void ColisForm_Load(object sender, EventArgs e)
