@@ -10,7 +10,7 @@ namespace Scance_23112020.Model
     {
         #region Attributs
         public static List<Livreurs> CollClassLivreur = new List<Livreurs>();
-        private Dictionary<DateTime, Livreurs> Livraison = new Dictionary<DateTime, Livreurs>();
+        private Dictionary<DateTime, Boxs> Livraison = new Dictionary<DateTime, Boxs>();
         private string _id;
         private string _nom;
         #endregion
@@ -30,6 +30,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        public Dictionary<DateTime, Boxs> getLivraison() { return Livraison; }
         #endregion
     }
 }

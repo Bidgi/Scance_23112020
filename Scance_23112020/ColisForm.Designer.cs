@@ -36,10 +36,9 @@
             this.labelBox = new System.Windows.Forms.Label();
             this.labelCompartiment = new System.Windows.Forms.Label();
             this.labelLivreur = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.buttonGene = new System.Windows.Forms.Button();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.textCompartiment = new System.Windows.Forms.TextBox();
+            this.textLivreur = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGriedViewColis)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,18 +54,18 @@
             // buttonLivre
             // 
             this.buttonLivre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLivre.Location = new System.Drawing.Point(61, 41);
+            this.buttonLivre.Location = new System.Drawing.Point(61, 307);
             this.buttonLivre.Name = "buttonLivre";
             this.buttonLivre.Size = new System.Drawing.Size(112, 34);
             this.buttonLivre.TabIndex = 1;
-            this.buttonLivre.Text = "Livrés";
+            this.buttonLivre.Text = "Livré";
             this.buttonLivre.UseVisualStyleBackColor = true;
             this.buttonLivre.Click += new System.EventHandler(this.buttonLivre_Click);
             // 
             // buttonAffecter
             // 
             this.buttonAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAffecter.Location = new System.Drawing.Point(254, 40);
+            this.buttonAffecter.Location = new System.Drawing.Point(252, 307);
             this.buttonAffecter.Name = "buttonAffecter";
             this.buttonAffecter.Size = new System.Drawing.Size(112, 35);
             this.buttonAffecter.TabIndex = 2;
@@ -77,7 +76,7 @@
             // buttonNAffecter
             // 
             this.buttonNAffecter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNAffecter.Location = new System.Drawing.Point(427, 40);
+            this.buttonNAffecter.Location = new System.Drawing.Point(427, 307);
             this.buttonNAffecter.Name = "buttonNAffecter";
             this.buttonNAffecter.Size = new System.Drawing.Size(112, 34);
             this.buttonNAffecter.TabIndex = 3;
@@ -88,7 +87,7 @@
             // dataGriedViewColis
             // 
             this.dataGriedViewColis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGriedViewColis.Location = new System.Drawing.Point(61, 115);
+            this.dataGriedViewColis.Location = new System.Drawing.Point(61, 55);
             this.dataGriedViewColis.Name = "dataGriedViewColis";
             this.dataGriedViewColis.Size = new System.Drawing.Size(478, 209);
             this.dataGriedViewColis.TabIndex = 4;
@@ -124,50 +123,41 @@
             this.labelLivreur.TabIndex = 7;
             this.labelLivreur.Text = "Livreur:";
             // 
-            // textBox1
+            // textBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(274, 392);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(253, 38);
-            this.textBox1.TabIndex = 8;
+            this.textBox.Enabled = false;
+            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Location = new System.Drawing.Point(274, 392);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(253, 38);
+            this.textBox.TabIndex = 8;
             // 
-            // textBox2
+            // textCompartiment
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(274, 455);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(253, 38);
-            this.textBox2.TabIndex = 9;
+            this.textCompartiment.Enabled = false;
+            this.textCompartiment.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textCompartiment.Location = new System.Drawing.Point(274, 455);
+            this.textCompartiment.Name = "textCompartiment";
+            this.textCompartiment.Size = new System.Drawing.Size(253, 38);
+            this.textCompartiment.TabIndex = 9;
             // 
-            // textBox3
+            // textLivreur
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(274, 519);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(253, 38);
-            this.textBox3.TabIndex = 10;
-            // 
-            // buttonGene
-            // 
-            this.buttonGene.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonGene.Location = new System.Drawing.Point(439, 330);
-            this.buttonGene.Name = "buttonGene";
-            this.buttonGene.Size = new System.Drawing.Size(100, 40);
-            this.buttonGene.TabIndex = 11;
-            this.buttonGene.Text = "Affecter";
-            this.buttonGene.UseVisualStyleBackColor = true;
-            this.buttonGene.Click += new System.EventHandler(this.buttonGene_Click);
+            this.textLivreur.Enabled = false;
+            this.textLivreur.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textLivreur.Location = new System.Drawing.Point(274, 519);
+            this.textLivreur.Name = "textLivreur";
+            this.textLivreur.Size = new System.Drawing.Size(253, 38);
+            this.textLivreur.TabIndex = 10;
             // 
             // ColisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 667);
-            this.Controls.Add(this.buttonGene);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textLivreur);
+            this.Controls.Add(this.textCompartiment);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.labelLivreur);
             this.Controls.Add(this.labelCompartiment);
             this.Controls.Add(this.labelBox);
@@ -195,9 +185,8 @@
         private System.Windows.Forms.Label labelBox;
         private System.Windows.Forms.Label labelCompartiment;
         private System.Windows.Forms.Label labelLivreur;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button buttonGene;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.TextBox textCompartiment;
+        private System.Windows.Forms.TextBox textLivreur;
     }
 }
