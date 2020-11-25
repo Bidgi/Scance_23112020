@@ -33,13 +33,22 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
-        /// <summary>
+        /// <summary> Raoul
         /// Permet d'ajourter le colis en paramettre au compartiment
         /// </summary>
         /// <param name="colis"> le colis </param>
         public void AddColis(Colis colis)
         {
             this.LesColis.Add(colis);
+        }
+        /// <summary> Raoul
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public Boxs GetBoxs()
+        {
+            foreach (Boxs unBoxs in Boxs.CollClassBox) if (unBoxs.LesCompartiment.Contains(this)) return unBoxs;
+            return null;
         }
         #endregion
     }
