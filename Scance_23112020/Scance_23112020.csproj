@@ -68,6 +68,12 @@
     <Compile Include="BoxForm.Designer.cs">
       <DependentUpon>BoxForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ColisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     </Compile>
     <EmbeddedResource Include="BoxForm.resx">
       <DependentUpon>BoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ColisForm.resx">
       <DependentUpon>ColisForm.cs</DependentUpon>

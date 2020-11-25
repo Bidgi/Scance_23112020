@@ -30,15 +30,16 @@
         {
             this.labelIDVille = new System.Windows.Forms.Label();
             this.labelNomVille = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxId = new System.Windows.Forms.TextBox();
+            this.textBoxVille = new System.Windows.Forms.TextBox();
             this.buttonCreer = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonModifier = new System.Windows.Forms.Button();
+            this.buttonEffacer = new System.Windows.Forms.Button();
             this.dataGridViewBoxs = new System.Windows.Forms.DataGridView();
             this.comboBoxVille = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxCP = new System.Windows.Forms.TextBox();
             this.labelCodePostal = new System.Windows.Forms.Label();
+            this.labelErreur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,19 +61,19 @@
             this.labelNomVille.TabIndex = 1;
             this.labelNomVille.Text = "Ville";
             // 
-            // textBox1
+            // textBoxId
             // 
-            this.textBox1.Location = new System.Drawing.Point(69, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxId.Location = new System.Drawing.Point(69, 116);
+            this.textBoxId.Name = "textBoxId";
+            this.textBoxId.Size = new System.Drawing.Size(100, 20);
+            this.textBoxId.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxVille
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxVille.Location = new System.Drawing.Point(204, 116);
+            this.textBoxVille.Name = "textBoxVille";
+            this.textBoxVille.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVille.TabIndex = 3;
             // 
             // buttonCreer
             // 
@@ -82,24 +83,27 @@
             this.buttonCreer.TabIndex = 4;
             this.buttonCreer.Text = "Créer";
             this.buttonCreer.UseVisualStyleBackColor = true;
+            this.buttonCreer.Click += new System.EventHandler(this.ButtonCreer_Click);
             // 
-            // button2
+            // buttonModifier
             // 
-            this.button2.Location = new System.Drawing.Point(218, 193);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Modifier";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonModifier.Location = new System.Drawing.Point(218, 193);
+            this.buttonModifier.Name = "buttonModifier";
+            this.buttonModifier.Size = new System.Drawing.Size(75, 23);
+            this.buttonModifier.TabIndex = 5;
+            this.buttonModifier.Text = "Modifier";
+            this.buttonModifier.UseVisualStyleBackColor = true;
+            this.buttonModifier.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // button3
+            // buttonEffacer
             // 
-            this.button3.Location = new System.Drawing.Point(359, 193);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Effacer";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonEffacer.Location = new System.Drawing.Point(359, 193);
+            this.buttonEffacer.Name = "buttonEffacer";
+            this.buttonEffacer.Size = new System.Drawing.Size(75, 23);
+            this.buttonEffacer.TabIndex = 6;
+            this.buttonEffacer.Text = "Effacer";
+            this.buttonEffacer.UseVisualStyleBackColor = true;
+            this.buttonEffacer.Click += new System.EventHandler(this.Button3_Click);
             // 
             // dataGridViewBoxs
             // 
@@ -120,12 +124,12 @@
             this.comboBoxVille.TabIndex = 8;
             this.comboBoxVille.SelectedIndexChanged += new System.EventHandler(this.comboBoxVille_SelectedIndexChanged);
             // 
-            // textBox3
+            // textBoxCP
             // 
-            this.textBox3.Location = new System.Drawing.Point(334, 116);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
+            this.textBoxCP.Location = new System.Drawing.Point(334, 116);
+            this.textBoxCP.Name = "textBoxCP";
+            this.textBoxCP.Size = new System.Drawing.Size(100, 20);
+            this.textBoxCP.TabIndex = 9;
             // 
             // labelCodePostal
             // 
@@ -136,24 +140,37 @@
             this.labelCodePostal.TabIndex = 10;
             this.labelCodePostal.Text = "Code Postal";
             // 
+            // labelErreur
+            // 
+            this.labelErreur.AutoSize = true;
+            this.labelErreur.ForeColor = System.Drawing.Color.Red;
+            this.labelErreur.Location = new System.Drawing.Point(69, 174);
+            this.labelErreur.Name = "labelErreur";
+            this.labelErreur.Size = new System.Drawing.Size(155, 13);
+            this.labelErreur.TabIndex = 11;
+            this.labelErreur.Text = "Une ville possède déjà cette ID";
+            this.labelErreur.Visible = false;
+            // 
             // VilleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 419);
+            this.Controls.Add(this.labelErreur);
             this.Controls.Add(this.labelCodePostal);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBoxCP);
             this.Controls.Add(this.comboBoxVille);
             this.Controls.Add(this.dataGridViewBoxs);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.buttonEffacer);
+            this.Controls.Add(this.buttonModifier);
             this.Controls.Add(this.buttonCreer);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxVille);
+            this.Controls.Add(this.textBoxId);
             this.Controls.Add(this.labelNomVille);
             this.Controls.Add(this.labelIDVille);
             this.Name = "VilleForm";
             this.Text = "VilleForm";
+            this.Load += new System.EventHandler(this.VilleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,14 +181,15 @@
 
         private System.Windows.Forms.Label labelIDVille;
         private System.Windows.Forms.Label labelNomVille;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxId;
+        private System.Windows.Forms.TextBox textBoxVille;
         private System.Windows.Forms.Button buttonCreer;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonModifier;
+        private System.Windows.Forms.Button buttonEffacer;
         private System.Windows.Forms.DataGridView dataGridViewBoxs;
         private System.Windows.Forms.ComboBox comboBoxVille;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxCP;
         private System.Windows.Forms.Label labelCodePostal;
+        private System.Windows.Forms.Label labelErreur;
     }
 }

@@ -35,6 +35,16 @@ namespace Scance_23112020.Model
             GPS = unGPS;
             CollLesClients.Add(this);
         }
+        public Client(int unId, string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP)
+        {
+            Id = unId;
+            Nom = unNom;
+            Prenom = unPrenom;
+            Adresse = uneAdresse;
+            Ville = uneVille;
+            CP = unCP;
+            CollLesClients.Add(this);
+        }
         #endregion
 
         #region Getters Setters

@@ -16,15 +16,110 @@ namespace Scance_23112020
         public VilleForm()
         {
             InitializeComponent();
-            foreach (Villes uneVille in Villes.CollClassVille)
-            {
-                comboBoxVille.Items.Add(uneVille.Id + "-" + uneVille.Nom);
-            }
         }
 
         private void comboBoxVille_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            if (comboBoxVille.Text == "Nouvelles Villes")
+            {
+                textBoxId.Text = ""+Villes.retourNouvelleId();
+                textBoxVille.Text = "";
+                textBoxCP.Text = "";
+            }
+            int IDDeVille = comboBoxVille.SelectedIndex + 2;
+            foreach (Villes uneVille in Villes.CollClassVille)
+            {
+                if (uneVille.Id == IDDeVille)
+                {
+                    textBoxId.Text = ""+uneVille.Id;
+                    textBoxVille.Text = uneVille.Nom;
+                    textBoxCP.Text = ""+uneVille.Codepostal;
+                }
+            }
+            {
+                DataTable data = new DataTable();
+                data.Columns.Add("ID", typeof(int));
+                data.Columns.Add("Adresse", typeof(string));
+
+                dataGridViewBoxs.Refresh();
+                foreach (Boxs uneBox in Boxs.CollClassBox)
+                {
+                    data.Rows.Add(uneBox.Id, uneBox.Adresse);
+                }
+                dataGridViewBoxs.DataSource = data;
+            }
+        }
+
+        private void ButtonCreer_Click(object sender, EventArgs e)
+        {
+            if (comboBoxVille.Text == "Nouvelles Villes")
+            {
+                labelErreur.Text = "Une ville possède déjà cette ID";
+                labelErreur.Visible = false;
+                if (textBoxVille.Text != "")
+                {
+                    if (textBoxCP.Text != "")
+                    {
+                        Villes unVille = new Villes(int.Parse(textBoxId.Text),textBoxVille.Text, int.Parse(textBoxCP.Text));
+                    }
+                    else
+                    {
+                        labelErreur.Text = "Le code postale n'est pas valide.";
+                        labelErreur.Visible = true;
+                    }
+                }
+                else
+                {
+                    labelErreur.Text = "Le nom n'est pas valide";
+                    labelErreur.Visible = true;
+                }
+            }
+            else
+            {
+                labelErreur.Text = "Une ville possède déjà cette ID";
+                labelErreur.Visible = true;
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            foreach(Villes uneVille in Villes.CollClassVille)
+            {
+                if(uneVille.Id == int.Parse(textBoxId.Text))
+                {
+                    if(textBoxVille.Text != "")
+                    {
+                        if(textBoxCP.Text != "")
+                        {
+                            uneVille.Nom = textBoxVille.Text;
+                            uneVille.Codepostal = int.Parse(textBoxCP.Text);
+                        }
+                        else
+                        {
+                            labelErreur.Text = "Le code postale n'est pas valide.";
+                            labelErreur.Visible = true;
+                        }
+                    }
+                    else
+                    {
+                        labelErreur.Text = "Le nom n'est pas valide";
+                        labelErreur.Visible = true;
+                    }
+                }
+            }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VilleForm_Load(object sender, EventArgs e)
+        {
+            foreach (Villes uneVille in Villes.CollClassVille)
+            {
+                comboBoxVille.Items.Add(uneVille.Id + "-" + uneVille.Nom);
+            }
         }
     }
 }
