@@ -13,47 +13,67 @@ namespace Scance_23112020
 {
     public partial class CompartimentForm : Form // raoul 
     {
+        public static Compartiments compartiments;
         public CompartimentForm()
         {
             InitializeComponent();
         }
         private void Compartiment_Load(object sender, EventArgs e)
         {
-            txtNombreColis.Text = BoxForm.leCompartiment.LesColis.Count.ToString();
-            int grosColis = 0, petitColis = 0, tauxRemplissage = 0;
-            foreach (Colis unColis in BoxForm.leCompartiment.LesColis)
+            compartiments = BoxForm.leCompartiment;
+            pBRemplissage.Value = 0;
+            if (compartiments.LesColis.Count > 0)
             {
-                cbbColis.Items.Add(unColis.Id);
-                if (unColis.Volume == "gros")
+                txtNombreColis.Text = compartiments.LesColis.Count.ToString();
+                int grosColis = 0, petitColis = 0, tauxRemplissage = 0;
+                foreach (Colis unColis in compartiments.LesColis)
                 {
-                    tauxRemplissage += 50;
-                    grosColis += 1;
+                    lbColis.Items.Add(unColis.Id);
+                    if (unColis.Volume == "gros")
+                    {
+                        pBRemplissage.Value += 50;
+                        tauxRemplissage += 50;
+                        grosColis += 1;
+                    }
+                    else
+                    {
+                        pBRemplissage.Value += 25;
+                        tauxRemplissage += 25;
+                        petitColis += 1;
+                    }
                 }
-                else 
-                {
-                    tauxRemplissage += 25;
-                    petitColis += 1; 
-                }
+                txtTauxRemplissage.Text = tauxRemplissage + "%";
+                txtNombreGrosColis.Text = grosColis.ToString();
+                txtNombrePetitColis.Text = petitColis.ToString();
+                txtNomClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Nom;
+                txtPrenomClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Prenom;
+                txtVilleClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Ville.Nom;
+                txtAdresseClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Adresse;
+                lbColis.SelectedItem = 0;
             }
-            txtTauxRemplissage.Text = tauxRemplissage.ToString();
-            txtNombreGrosColis.Text = grosColis.ToString();
-            txtNombrePetitColis.Text = petitColis.ToString();
-            txtNomClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Nom;
-            txtPrenomClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Prenom;
-            txtVilleClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Ville.Nom;
-            txtAdresseClient.Text = BoxForm.leCompartiment.LesColis.ElementAt(0).LeClient.Adresse;
-            cbbColis.SelectedIndex = 0;
+            else
+            {
+                txtNombreColis.Text = "0";
+                txtTauxRemplissage.Text = "0%";
+                txtNombreGrosColis.Text = "0";
+                txtNombrePetitColis.Text = "0";
+                txtNomClient.Text = "libre";
+                txtPrenomClient.Text = "libre";
+                txtVilleClient.Text = "libre";
+                txtAdresseClient.Text = "libre";
+            }
         }
 
-        private void cbbColis_SelectedIndexChanged(object sender, EventArgs e)
+        private void lbColis_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Colis unColis in BoxForm.leCompartiment.LesColis)
+            foreach (Colis unColis in compartiments.LesColis)
             {
-                if (unColis.Id == cbbColis.SelectedItem.ToString())
+                if(unColis.Id == lbColis.SelectedItem.ToString())
                 {
-                    txtPrenomClient.Text = unColis.Id;
-                    txtVilleClient.Text = unColis.Volume;
-                    txtAdresseClient.Text = unColis.Etat;
+                    txtIdColis.Text = unColis.Id;
+                    txtEtatColis.Text = unColis.Etat;
+                    txtVolumeColis.Text = unColis.Volume;
+                    break;
                 }
             }
         }

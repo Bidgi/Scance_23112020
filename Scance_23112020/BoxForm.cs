@@ -21,10 +21,6 @@ namespace Scance_23112020
         }
         private void Box_Load(object sender, EventArgs e)
         {
-            Boxs b1 = new Boxs("1", " 4rue ", new GeoCoordinate(), new List<Compartiments>() {new Compartiments("5","9"), new Compartiments("4","8") });
-            Boxs b2 = new Boxs("2", " 6rue ", new GeoCoordinate(), new List<Compartiments>() { });
-            Colis c1 = new Colis("de", "gros", new Client(1, "girardin", "raoul", "4 rue de l'argoat", new Villes("1", "pléhédel", 22290, new List<Boxs>() { b1, b2 }), 22290, new GeoCoordinate()));
-            b1.LesCompartiment.ElementAt(0).AddColis(c1);
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
@@ -71,7 +67,7 @@ namespace Scance_23112020
         {
             foreach (Boxs Boxs in Boxs.CollClassBox)
                 foreach (Compartiments unCompartiment in Boxs.LesCompartiment)
-                    if(unCompartiment.PositionX == dataGridView1.SelectedRows[0].Cells[0].Value.ToString() && unCompartiment.PositionY == dataGridView1.SelectedRows[0].Cells[1].Value.ToString())
+                    if(unCompartiment.PositionX == dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[0].Value.ToString() && unCompartiment.PositionY == dataGridView1.Rows[dataGridView1.SelectedCells[0].RowIndex].Cells[1].Value.ToString())
                         leCompartiment = unCompartiment;
             CompartimentForm compartimentForm = new CompartimentForm();
             compartimentForm.Show();

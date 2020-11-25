@@ -16,7 +16,7 @@ namespace Scance_23112020
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BoxForm());
+            Application.Run(new Menu());
         }
     }
 }

@@ -45,7 +45,6 @@ namespace Scance_23112020
         {
             foreach (Livreurs unLivreur in Livreurs.CollClassLivreur) cbbLivreur.Items.Add(unLivreur.Nom);
         }
-
         private void cbbLivreur_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
@@ -57,7 +56,6 @@ namespace Scance_23112020
                 }
             }
         }
-
         private void dTP_ValueChanged(object sender, EventArgs e)
         {
 

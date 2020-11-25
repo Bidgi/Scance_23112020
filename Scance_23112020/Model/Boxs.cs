@@ -19,12 +19,12 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Boxs(string id, string adresse, GeoCoordinate gps, List<Compartiments> lesCompartiment)
+        public Boxs(string id, string adresse, GeoCoordinate gps)
         {
             Id = id;
             Adresse = adresse;
             Gps = gps;
-            LesCompartiment = lesCompartiment;
+            LesCompartiment = new List<Compartiments>();
             CollClassBox.Add(this);
             DictionnaireBoxs.Add(this, Id);
         }
@@ -38,6 +38,10 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        public void AddCompartiment(Compartiments unCompartiment)
+        {
+            this.LesCompartiment.Add(unCompartiment);
+        }
         #endregion
     }
 }

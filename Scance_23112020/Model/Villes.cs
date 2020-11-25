@@ -17,12 +17,12 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Villes(string id, string nom, int codepostal, List<Boxs> lesBox)
+        public Villes(string id, string nom, int codepostal)
         {
             Id = id;
             Nom = nom;
             Codepostal = codepostal;
-            LesBox = lesBox;
+            LesBox = new List<Boxs>();
             CollClassVille.Add(this);
         }
         #endregion
@@ -35,6 +35,10 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Méthodes
+        public void AddBox(Boxs unBoxs)
+        {
+            this.LesBox.Add(unBoxs);
+        }
         #endregion
     }
 }
