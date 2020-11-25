@@ -53,7 +53,7 @@ namespace Scance_23112020
                         {
                             unCompa.LesColis.Add(LeColisClient);
                             LeColisClient.Etat = "Affecté";
-                            textBox.Text = laBoxeLaPlusProche.getLAdresse();
+                            textBox.Text = laBoxeLaPlusProche.Adresse;
                             textCompartiment.Text = "X= " + unCompa.PositionX + " Y= " + unCompa.PositionY;
                             foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
                             {

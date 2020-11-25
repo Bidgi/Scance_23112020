@@ -15,7 +15,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeurs
-        public Client_Pro (int uneId, string unNom, string unPrenom, string uneAdresse, Villes uneVille, int unCP, GeoCoordinate unGPS, double unVolume, double uneRemise) : base ( uneId,  unNom,  unPrenom,  uneAdresse,  uneVille,  unCP,  unGPS)
+        public Client_Pro (int uneId, string unNom, string unPrenom, string uneAdresse, Villes uneVille, GeoCoordinate unGPS, double unVolume, double uneRemise) : base ( uneId,  unNom,  unPrenom,  uneAdresse,  uneVille,  unGPS)
         {
             VolumeNegocie = unVolume;
             Remise = uneRemise;

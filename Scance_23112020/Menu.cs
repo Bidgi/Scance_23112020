@@ -56,8 +56,23 @@ namespace Scance_23112020
             #endregion
 
             #region NewCompartiment
-            Compartiments lannionBoxs1Compartimen1 = new Compartiments("1","2");
-            Compartiments lannionBoxs1Compartimen2 = new Compartiments("2", "2");
+            Compartiments lannionBoxs1Compartimen1 = new Compartiments("1","1");
+            Compartiments lannionBoxs1Compartimen2 = new Compartiments("1", "2");
+            Compartiments lannionBoxs1Compartimen3 = new Compartiments("1", "3");
+            Compartiments lannionBoxs1Compartimen4 = new Compartiments("1", "4");
+            Compartiments lannionBoxs1Compartimen5 = new Compartiments("2", "1");
+            Compartiments lannionBoxs1Compartimen6 = new Compartiments("2", "2");
+            Compartiments lannionBoxs1Compartimen7 = new Compartiments("2", "3");
+            Compartiments lannionBoxs1Compartimen8 = new Compartiments("2", "4");
+            Compartiments lannionBoxs1Compartimen9 = new Compartiments("3", "1");
+            Compartiments lannionBoxs1Compartimen10 = new Compartiments("3", "2");
+            Compartiments lannionBoxs1Compartimen11 = new Compartiments("3", "3");
+            Compartiments lannionBoxs1Compartimen12 = new Compartiments("3", "4");
+            Compartiments lannionBoxs1Compartimen13 = new Compartiments("4", "1");
+            Compartiments lannionBoxs1Compartimen14 = new Compartiments("4", "2");
+            Compartiments lannionBoxs1Compartimen15 = new Compartiments("4", "3");
+            Compartiments lannionBoxs1Compartimen16 = new Compartiments("4", "4");
+
             Compartiments lannionBoxs2Compartimen1 = new Compartiments("1", "2");
             Compartiments lannionBoxs2Compartimen2 = new Compartiments("2", "2");
 
@@ -85,6 +100,21 @@ namespace Scance_23112020
             #region AddCompartiment
             lannionboxs1.AddCompartiment(lannionBoxs1Compartimen1);
             lannionboxs1.AddCompartiment(lannionBoxs1Compartimen2);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen3);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen4);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen5);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen6);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen7);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen8);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen9);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen10);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen11);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen12);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen13);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen14);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen15);
+            lannionboxs1.AddCompartiment(lannionBoxs1Compartimen16);
+
             lannionboxs2.AddCompartiment(lannionBoxs2Compartimen1);
             lannionboxs2.AddCompartiment(lannionBoxs2Compartimen2);
 
@@ -107,6 +137,49 @@ namespace Scance_23112020
             parisboxs1.AddCompartiment(parisBoxs1Compartimen2);
             parisboxs2.AddCompartiment(parisBoxs2Compartimen1);
             parisboxs2.AddCompartiment(parisBoxs2Compartimen2);
+            #endregion
+
+            #region NewClient
+            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", "4 rue de l'argoat", lannion, new GeoCoordinate(),0,0);
+            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", "1 rue de l'argoat", lannion, new GeoCoordinate(), 0);
+            #endregion
+
+            #region NewColis
+            Colis petitColisPro1 = new Colis("1", "petit", client_Pro);
+            Colis petitColisPro2 = new Colis("2", "petit", client_Pro);
+            Colis petitColisPro3 = new Colis("3", "petit", client_Pro);
+            Colis petitColisPro4 = new Colis("4", "petit", client_Pro);
+
+            Colis petitColisIndi1 = new Colis("5", "petit", client_Indi);
+            Colis petitColisIndi2 = new Colis("6", "petit", client_Indi);
+            Colis petitColisIndi3 = new Colis("7", "petit", client_Indi);
+            Colis petitColisIndi4 = new Colis("8", "petit", client_Indi);
+
+            Colis grosColisPro1 = new Colis("9", "gros", client_Pro);
+            Colis grosColisPro2 = new Colis("10", "gros", client_Pro);
+
+            Colis grosColisIndi1 = new Colis("11", "gros", client_Indi);
+            Colis grosColisIndi2 = new Colis("12", "gros", client_Indi);
+            #endregion
+
+            #region AddColis
+            lannionBoxs1Compartimen1.AddColis(petitColisPro1);
+            lannionBoxs1Compartimen1.AddColis(petitColisPro2);
+            lannionBoxs1Compartimen1.AddColis(grosColisPro1);
+
+            lannionBoxs1Compartimen4.AddColis(petitColisPro3);
+            lannionBoxs1Compartimen4.AddColis(petitColisPro4);
+
+            lannionBoxs1Compartimen5.AddColis(grosColisPro2);
+
+            lannionBoxs1Compartimen9.AddColis(petitColisIndi4);
+            lannionBoxs1Compartimen9.AddColis(petitColisIndi3);
+            lannionBoxs1Compartimen9.AddColis(petitColisIndi2);
+
+            lannionBoxs1Compartimen12.AddColis(petitColisIndi1);
+
+            lannionBoxs1Compartimen16.AddColis(grosColisIndi1);
+            lannionBoxs1Compartimen16.AddColis(grosColisIndi2);
             #endregion
         }
         private void btnVille_Click(object sender, EventArgs e)
