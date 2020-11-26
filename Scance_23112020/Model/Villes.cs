@@ -10,14 +10,14 @@ namespace Scance_23112020.Model
     {
         #region Attributs
         public static List<Villes> CollClassVille = new List<Villes>();
-        private string _id;
+        private int _id;
         private string _nom;
         private int _codepostal;
         private List<Boxs> _lesBox;
         #endregion
 
         #region Constructeur
-        public Villes(string id, string nom, int codepostal)
+        public Villes(int id, string nom, int codepostal)
         {
             Id = id;
             Nom = nom;
@@ -25,10 +25,11 @@ namespace Scance_23112020.Model
             LesBox = new List<Boxs>();
             CollClassVille.Add(this);
         }
+        public Villes() { }
         #endregion
 
         #region Getters-Setters
-        public string Id { get => _id; set => _id = value; }
+        public int Id { get => _id; set => _id = value; }
         public string Nom { get => _nom; set => _nom = value; }
         public int Codepostal { get => _codepostal; set => _codepostal = value; }
         internal List<Boxs> LesBox { get => _lesBox; set => _lesBox = value; }
@@ -38,6 +39,27 @@ namespace Scance_23112020.Model
         public void AddBox(Boxs unBoxs)
         {
             this.LesBox.Add(unBoxs);
+        }
+        public static int retourNouvelleId()
+        {
+            int x = 0;
+            foreach (Villes uneVilles in CollClassVille)
+            {
+                x++;
+            }
+            return x;
+        }
+        public static Villes retourVilleId(int uneId)
+        {
+            Villes uneVilleRetour = null;
+            foreach (Villes uneVille in CollClassVille)
+            {
+                if (uneVilleRetour.Id == uneId)
+                {
+                    uneVilleRetour = uneVille;
+                }
+            }
+            return uneVilleRetour;
         }
         #endregion
     }
