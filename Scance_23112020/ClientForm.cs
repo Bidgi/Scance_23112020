@@ -39,7 +39,7 @@ namespace Scance_23112020
                     textBoxID.Text =""+ unClient.getLId();
                     textBoxAdresse.Text = unClient.getLAdresse();
                     comboBoxVille.Text = unClient.getLaVille().Nom;
-                    textBoxCP.Text = "" + unClient.getCodePostale();
+                    textBoxCP.Text = "" + unClient.getLaVille().Codepostal;
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace Scance_23112020
                                 if (textBoxAdresse.Text != "")
                                 {
                                     labelErreur.Visible = false;
-                                    Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, textBoxAdresse.Text, Villes.retourVilleId(int.Parse(comboBoxVille.Text)), int.Parse(textBoxCP.Text));
+                                    Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, textBoxAdresse.Text, Villes.retourVilleId(int.Parse(comboBoxVille.Text)));
                                 }
                                 else
                                 {
@@ -127,7 +127,6 @@ namespace Scance_23112020
                                         unClient.Prenom = textBoxPrenom.Text;
                                         unClient.Adresse = textBoxAdresse.Text;
                                         unClient.Ville = Villes.retourVilleId(int.Parse(comboBoxVille.Text));
-                                        unClient.CP = int.Parse(textBoxCP.Text);
                                     }
                                 }
                             }

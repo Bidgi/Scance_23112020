@@ -43,9 +43,6 @@
             this.cbbBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIDBox = new System.Windows.Forms.TextBox();
-            this.btnEffacerCompartiment = new System.Windows.Forms.Button();
-            this.btnModifierCompartiment = new System.Windows.Forms.Button();
-            this.btnCreeCompartiment = new System.Windows.Forms.Button();
             this.btnDetailCompartiment = new System.Windows.Forms.Button();
             this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -150,7 +147,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(396, 68);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 204);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(275, 150);
             this.dataGridView1.TabIndex = 12;
@@ -159,7 +156,7 @@
             // cbbBox
             // 
             this.cbbBox.FormattingEnabled = true;
-            this.cbbBox.Location = new System.Drawing.Point(396, 41);
+            this.cbbBox.Location = new System.Drawing.Point(12, 177);
             this.cbbBox.Name = "cbbBox";
             this.cbbBox.Size = new System.Drawing.Size(275, 21);
             this.cbbBox.TabIndex = 13;
@@ -168,7 +165,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(393, 25);
+            this.label6.Location = new System.Drawing.Point(9, 161);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 13);
             this.label6.TabIndex = 14;
@@ -181,39 +178,9 @@
             this.txtIDBox.Size = new System.Drawing.Size(100, 20);
             this.txtIDBox.TabIndex = 5;
             // 
-            // btnEffacerCompartiment
-            // 
-            this.btnEffacerCompartiment.Location = new System.Drawing.Point(670, 224);
-            this.btnEffacerCompartiment.Name = "btnEffacerCompartiment";
-            this.btnEffacerCompartiment.Size = new System.Drawing.Size(95, 23);
-            this.btnEffacerCompartiment.TabIndex = 17;
-            this.btnEffacerCompartiment.Text = "Effacer";
-            this.btnEffacerCompartiment.UseVisualStyleBackColor = true;
-            this.btnEffacerCompartiment.Click += new System.EventHandler(this.btnEffacerCompartiment_Click);
-            // 
-            // btnModifierCompartiment
-            // 
-            this.btnModifierCompartiment.Location = new System.Drawing.Point(580, 224);
-            this.btnModifierCompartiment.Name = "btnModifierCompartiment";
-            this.btnModifierCompartiment.Size = new System.Drawing.Size(84, 23);
-            this.btnModifierCompartiment.TabIndex = 16;
-            this.btnModifierCompartiment.Text = "Modifier";
-            this.btnModifierCompartiment.UseVisualStyleBackColor = true;
-            this.btnModifierCompartiment.Click += new System.EventHandler(this.btnModifierCompartiment_Click);
-            // 
-            // btnCreeCompartiment
-            // 
-            this.btnCreeCompartiment.Location = new System.Drawing.Point(490, 224);
-            this.btnCreeCompartiment.Name = "btnCreeCompartiment";
-            this.btnCreeCompartiment.Size = new System.Drawing.Size(84, 23);
-            this.btnCreeCompartiment.TabIndex = 15;
-            this.btnCreeCompartiment.Text = "Créer";
-            this.btnCreeCompartiment.UseVisualStyleBackColor = true;
-            this.btnCreeCompartiment.Click += new System.EventHandler(this.btnCreeCompartiment_Click);
-            // 
             // btnDetailCompartiment
             // 
-            this.btnDetailCompartiment.Location = new System.Drawing.Point(400, 224);
+            this.btnDetailCompartiment.Location = new System.Drawing.Point(12, 360);
             this.btnDetailCompartiment.Name = "btnDetailCompartiment";
             this.btnDetailCompartiment.Size = new System.Drawing.Size(84, 23);
             this.btnDetailCompartiment.TabIndex = 18;
@@ -223,7 +190,7 @@
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(564, 356);
+            this.btnRetour.Location = new System.Drawing.Point(100, 389);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(187, 27);
             this.btnRetour.TabIndex = 19;
@@ -235,12 +202,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(315, 511);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnDetailCompartiment);
-            this.Controls.Add(this.btnEffacerCompartiment);
-            this.Controls.Add(this.btnModifierCompartiment);
-            this.Controls.Add(this.btnCreeCompartiment);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cbbBox);
             this.Controls.Add(this.dataGridView1);
@@ -282,9 +246,6 @@
         private System.Windows.Forms.ComboBox cbbBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIDBox;
-        private System.Windows.Forms.Button btnEffacerCompartiment;
-        private System.Windows.Forms.Button btnModifierCompartiment;
-        private System.Windows.Forms.Button btnCreeCompartiment;
         private System.Windows.Forms.Button btnDetailCompartiment;
         private System.Windows.Forms.Button btnRetour;
     }

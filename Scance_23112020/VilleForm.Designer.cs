@@ -41,6 +41,7 @@
             this.labelCodePostal = new System.Windows.Forms.Label();
             this.labelErreur = new System.Windows.Forms.Label();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.btnDétailBox = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,7 +105,6 @@
             this.buttonEffacer.TabIndex = 6;
             this.buttonEffacer.Text = "Effacer";
             this.buttonEffacer.UseVisualStyleBackColor = true;
-            this.buttonEffacer.Click += new System.EventHandler(this.Button3_Click);
             // 
             // dataGridViewBoxs
             // 
@@ -162,13 +162,23 @@
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
+            // btnDétailBox
+            // 
+            this.btnDétailBox.Location = new System.Drawing.Point(69, 399);
+            this.btnDétailBox.Name = "btnDétailBox";
+            this.btnDétailBox.Size = new System.Drawing.Size(75, 23);
+            this.btnDétailBox.TabIndex = 12;
+            this.btnDétailBox.Text = "Détail box";
+            this.btnDétailBox.UseVisualStyleBackColor = true;
+            this.btnDétailBox.Click += new System.EventHandler(this.btnDétailBox_Click);
+            // 
             // VilleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 419);
-            this.Controls.Add(this.labelErreur);
             this.ClientSize = new System.Drawing.Size(508, 438);
+            this.Controls.Add(this.btnDétailBox);
+            this.Controls.Add(this.labelErreur);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.labelCodePostal);
             this.Controls.Add(this.textBoxCP);
@@ -205,5 +215,6 @@
         private System.Windows.Forms.Label labelCodePostal;
         private System.Windows.Forms.Label labelErreur;
         private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Button btnDétailBox;
     }
 }

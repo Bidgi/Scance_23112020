@@ -13,6 +13,7 @@ namespace Scance_23112020
 {
     public partial class VilleForm : Form
     {
+        internal static Villes laVille;
         public VilleForm()
         {
             InitializeComponent();
@@ -52,8 +53,6 @@ namespace Scance_23112020
                 }
                 dataGridViewBoxs.DataSource = data;
             }
-            int IDDeVille = comboBoxVille.SelectedIndex + 2;
-            
         }
 
         private void ButtonCreer_Click(object sender, EventArgs e)
@@ -115,11 +114,6 @@ namespace Scance_23112020
             }
         }
 
-        private void Button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void VilleForm_Load(object sender, EventArgs e)
         {
             foreach (Villes uneVille in Villes.CollClassVille)
@@ -135,6 +129,14 @@ namespace Scance_23112020
         {
             Program.menu.Visible = true;
             this.Close();
+        }
+
+        private void btnDétailBox_Click(object sender, EventArgs e)
+        {
+            laVille = 
+            BoxForm boxForm = new BoxForm();
+            boxForm.Show();
+            this.Visible = false;
         }
     }
 }

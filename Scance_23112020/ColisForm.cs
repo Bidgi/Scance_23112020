@@ -30,7 +30,6 @@ namespace Scance_23112020
             string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
             Colis LeColisClient = Colis.ReturnColis(idColis);
             Client LeClientColis = Colis.ReturnColis(idColis).getLeClient();
-            double plusPetiteDistance = Int32.MaxValue;
             List<Boxs> lesBoxsPresClient = Boxs.getBoxsTrieesDistance(LeClientColis);
             foreach (Boxs laBoxeLaPlusProche in lesBoxsPresClient)
             {

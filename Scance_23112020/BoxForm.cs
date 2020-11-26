@@ -24,6 +24,7 @@ namespace Scance_23112020
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
+            foreach (Villes uneVille in Villes.CollClassVille) cbbVilleBox.Items.Add(uneVille);
         }
         private void cbbBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -47,10 +48,6 @@ namespace Scance_23112020
         private void btnModifierCompartiment_Click(object sender, EventArgs e)
         {
 
-        }
-        private void btnEffacerCompartiment_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.SelectedRows.Count; i++) dataGridView1.Rows.Remove(dataGridView1.SelectedRows[i]);
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
