@@ -184,7 +184,9 @@ namespace Scance_23112020
         }
         private void btnVille_Click(object sender, EventArgs e)
         {
-            
+            VilleForm villeForm = new VilleForm();
+            villeForm.Show();
+            this.Visible = false;
         }
 
         private void btnBox_Click(object sender, EventArgs e)
@@ -207,6 +209,5 @@ namespace Scance_23112020
             colisForm.Show();
             this.Visible = false;
         }
-
     }
 }

@@ -40,6 +40,7 @@
             this.textBoxCP = new System.Windows.Forms.TextBox();
             this.labelCodePostal = new System.Windows.Forms.Label();
             this.labelErreur = new System.Windows.Forms.Label();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,12 +152,24 @@
             this.labelErreur.Text = "Une ville possède déjà cette ID";
             this.labelErreur.Visible = false;
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(247, 399);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(187, 27);
+            this.btnRetour.TabIndex = 11;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // VilleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 419);
             this.Controls.Add(this.labelErreur);
+            this.ClientSize = new System.Drawing.Size(508, 438);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.labelCodePostal);
             this.Controls.Add(this.textBoxCP);
             this.Controls.Add(this.comboBoxVille);
@@ -191,5 +204,6 @@
         private System.Windows.Forms.TextBox textBoxCP;
         private System.Windows.Forms.Label labelCodePostal;
         private System.Windows.Forms.Label labelErreur;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

@@ -56,39 +56,44 @@
             this.pBRemplissage = new System.Windows.Forms.ProgressBar();
             this.pb11 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbColis = new System.Windows.Forms.ListBox();
+            this.pb44 = new System.Windows.Forms.PictureBox();
+            this.pb12 = new System.Windows.Forms.PictureBox();
+            this.pb43 = new System.Windows.Forms.PictureBox();
             this.pb13 = new System.Windows.Forms.PictureBox();
             this.pb14 = new System.Windows.Forms.PictureBox();
+            this.pb42 = new System.Windows.Forms.PictureBox();
+            this.pb21 = new System.Windows.Forms.PictureBox();
+            this.pb41 = new System.Windows.Forms.PictureBox();
+            this.pb34 = new System.Windows.Forms.PictureBox();
+            this.pb22 = new System.Windows.Forms.PictureBox();
             this.pb23 = new System.Windows.Forms.PictureBox();
             this.pb24 = new System.Windows.Forms.PictureBox();
-            this.pb41 = new System.Windows.Forms.PictureBox();
+            this.pb33 = new System.Windows.Forms.PictureBox();
             this.pb31 = new System.Windows.Forms.PictureBox();
             this.pb32 = new System.Windows.Forms.PictureBox();
-            this.pb42 = new System.Windows.Forms.PictureBox();
-            this.pb33 = new System.Windows.Forms.PictureBox();
-            this.pb34 = new System.Windows.Forms.PictureBox();
-            this.pb43 = new System.Windows.Forms.PictureBox();
-            this.pb44 = new System.Windows.Forms.PictureBox();
-            this.pb22 = new System.Windows.Forms.PictureBox();
-            this.pb21 = new System.Windows.Forms.PictureBox();
-            this.pb12 = new System.Windows.Forms.PictureBox();
+            this.lbColis = new System.Windows.Forms.ListBox();
+            this.btnRetour = new System.Windows.Forms.Button();
+            this.txtbPX = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtbPY = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pb11)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb43)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb33)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb31)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb12)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTauxRemplissage
@@ -349,14 +354,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compartiment";
             // 
-            // lbColis
+            // pb44
             // 
-            this.lbColis.FormattingEnabled = true;
-            this.lbColis.Location = new System.Drawing.Point(556, 81);
-            this.lbColis.Name = "lbColis";
-            this.lbColis.Size = new System.Drawing.Size(120, 95);
-            this.lbColis.TabIndex = 59;
-            this.lbColis.SelectedIndexChanged += new System.EventHandler(this.lbColis_SelectedIndexChanged);
+            this.pb44.Location = new System.Drawing.Point(93, 100);
+            this.pb44.Name = "pb44";
+            this.pb44.Size = new System.Drawing.Size(21, 21);
+            this.pb44.TabIndex = 72;
+            this.pb44.TabStop = false;
+            // 
+            // pb12
+            // 
+            this.pb12.Location = new System.Drawing.Point(39, 19);
+            this.pb12.Name = "pb12";
+            this.pb12.Size = new System.Drawing.Size(21, 21);
+            this.pb12.TabIndex = 58;
+            this.pb12.TabStop = false;
+            // 
+            // pb43
+            // 
+            this.pb43.Location = new System.Drawing.Point(66, 100);
+            this.pb43.Name = "pb43";
+            this.pb43.Size = new System.Drawing.Size(21, 21);
+            this.pb43.TabIndex = 71;
+            this.pb43.TabStop = false;
             // 
             // pb13
             // 
@@ -374,6 +394,46 @@
             this.pb14.TabIndex = 60;
             this.pb14.TabStop = false;
             // 
+            // pb42
+            // 
+            this.pb42.Location = new System.Drawing.Point(39, 100);
+            this.pb42.Name = "pb42";
+            this.pb42.Size = new System.Drawing.Size(21, 21);
+            this.pb42.TabIndex = 70;
+            this.pb42.TabStop = false;
+            // 
+            // pb21
+            // 
+            this.pb21.Location = new System.Drawing.Point(12, 46);
+            this.pb21.Name = "pb21";
+            this.pb21.Size = new System.Drawing.Size(21, 21);
+            this.pb21.TabIndex = 61;
+            this.pb21.TabStop = false;
+            // 
+            // pb41
+            // 
+            this.pb41.Location = new System.Drawing.Point(12, 100);
+            this.pb41.Name = "pb41";
+            this.pb41.Size = new System.Drawing.Size(21, 21);
+            this.pb41.TabIndex = 69;
+            this.pb41.TabStop = false;
+            // 
+            // pb34
+            // 
+            this.pb34.Location = new System.Drawing.Point(93, 73);
+            this.pb34.Name = "pb34";
+            this.pb34.Size = new System.Drawing.Size(21, 21);
+            this.pb34.TabIndex = 68;
+            this.pb34.TabStop = false;
+            // 
+            // pb22
+            // 
+            this.pb22.Location = new System.Drawing.Point(39, 46);
+            this.pb22.Name = "pb22";
+            this.pb22.Size = new System.Drawing.Size(21, 21);
+            this.pb22.TabIndex = 62;
+            this.pb22.TabStop = false;
+            // 
             // pb23
             // 
             this.pb23.Location = new System.Drawing.Point(66, 46);
@@ -390,13 +450,13 @@
             this.pb24.TabIndex = 64;
             this.pb24.TabStop = false;
             // 
-            // pb41
+            // pb33
             // 
-            this.pb41.Location = new System.Drawing.Point(12, 100);
-            this.pb41.Name = "pb41";
-            this.pb41.Size = new System.Drawing.Size(21, 21);
-            this.pb41.TabIndex = 69;
-            this.pb41.TabStop = false;
+            this.pb33.Location = new System.Drawing.Point(66, 73);
+            this.pb33.Name = "pb33";
+            this.pb33.Size = new System.Drawing.Size(21, 21);
+            this.pb33.TabIndex = 67;
+            this.pb33.TabStop = false;
             // 
             // pb31
             // 
@@ -414,75 +474,67 @@
             this.pb32.TabIndex = 66;
             this.pb32.TabStop = false;
             // 
-            // pb42
+            // lbColis
             // 
-            this.pb42.Location = new System.Drawing.Point(39, 100);
-            this.pb42.Name = "pb42";
-            this.pb42.Size = new System.Drawing.Size(21, 21);
-            this.pb42.TabIndex = 70;
-            this.pb42.TabStop = false;
+            this.lbColis.FormattingEnabled = true;
+            this.lbColis.Location = new System.Drawing.Point(556, 81);
+            this.lbColis.Name = "lbColis";
+            this.lbColis.Size = new System.Drawing.Size(120, 95);
+            this.lbColis.TabIndex = 59;
+            this.lbColis.SelectedIndexChanged += new System.EventHandler(this.lbColis_SelectedIndexChanged);
             // 
-            // pb33
+            // btnRetour
             // 
-            this.pb33.Location = new System.Drawing.Point(66, 73);
-            this.pb33.Name = "pb33";
-            this.pb33.Size = new System.Drawing.Size(21, 21);
-            this.pb33.TabIndex = 67;
-            this.pb33.TabStop = false;
+            this.btnRetour.Location = new System.Drawing.Point(489, 381);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(187, 27);
+            this.btnRetour.TabIndex = 60;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
-            // pb34
+            // txtbPX
             // 
-            this.pb34.Location = new System.Drawing.Point(93, 73);
-            this.pb34.Name = "pb34";
-            this.pb34.Size = new System.Drawing.Size(21, 21);
-            this.pb34.TabIndex = 68;
-            this.pb34.TabStop = false;
+            this.txtbPX.Location = new System.Drawing.Point(265, 21);
+            this.txtbPX.Name = "txtbPX";
+            this.txtbPX.Size = new System.Drawing.Size(30, 20);
+            this.txtbPX.TabIndex = 64;
             // 
-            // pb43
+            // label16
             // 
-            this.pb43.Location = new System.Drawing.Point(66, 100);
-            this.pb43.Name = "pb43";
-            this.pb43.Size = new System.Drawing.Size(21, 21);
-            this.pb43.TabIndex = 71;
-            this.pb43.TabStop = false;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(196, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(63, 13);
+            this.label16.TabIndex = 63;
+            this.label16.Text = "Position  X :";
             // 
-            // pb44
+            // txtbPY
             // 
-            this.pb44.Location = new System.Drawing.Point(93, 100);
-            this.pb44.Name = "pb44";
-            this.pb44.Size = new System.Drawing.Size(21, 21);
-            this.pb44.TabIndex = 72;
-            this.pb44.TabStop = false;
+            this.txtbPY.Location = new System.Drawing.Point(327, 21);
+            this.txtbPY.Name = "txtbPY";
+            this.txtbPY.Size = new System.Drawing.Size(30, 20);
+            this.txtbPY.TabIndex = 66;
             // 
-            // pb22
+            // label17
             // 
-            this.pb22.Location = new System.Drawing.Point(39, 46);
-            this.pb22.Name = "pb22";
-            this.pb22.Size = new System.Drawing.Size(21, 21);
-            this.pb22.TabIndex = 62;
-            this.pb22.TabStop = false;
-            // 
-            // pb21
-            // 
-            this.pb21.Location = new System.Drawing.Point(12, 46);
-            this.pb21.Name = "pb21";
-            this.pb21.Size = new System.Drawing.Size(21, 21);
-            this.pb21.TabIndex = 61;
-            this.pb21.TabStop = false;
-            // 
-            // pb12
-            // 
-            this.pb12.Location = new System.Drawing.Point(39, 19);
-            this.pb12.Name = "pb12";
-            this.pb12.Size = new System.Drawing.Size(21, 21);
-            this.pb12.TabIndex = 58;
-            this.pb12.TabStop = false;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(301, 24);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(20, 13);
+            this.label17.TabIndex = 65;
+            this.label17.Text = "Y :";
             // 
             // CompartimentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtbPY);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.txtbPX);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.lbColis);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pBRemplissage);
@@ -516,21 +568,21 @@
             this.Load += new System.EventHandler(this.Compartiment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb11)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb43)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb22)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb33)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb31)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb12)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -581,5 +633,10 @@
         private System.Windows.Forms.PictureBox pb33;
         private System.Windows.Forms.PictureBox pb31;
         private System.Windows.Forms.PictureBox pb32;
+        private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.TextBox txtbPX;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox txtbPY;
+        private System.Windows.Forms.Label label17;
     }
 }

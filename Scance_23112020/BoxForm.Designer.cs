@@ -47,6 +47,7 @@
             this.btnModifierCompartiment = new System.Windows.Forms.Button();
             this.btnCreeCompartiment = new System.Windows.Forms.Button();
             this.btnDetailCompartiment = new System.Windows.Forms.Button();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -220,11 +221,22 @@
             this.btnDetailCompartiment.UseVisualStyleBackColor = true;
             this.btnDetailCompartiment.Click += new System.EventHandler(this.btnDetailCompartiment_Click);
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(564, 356);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(187, 27);
+            this.btnRetour.TabIndex = 19;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // BoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnDetailCompartiment);
             this.Controls.Add(this.btnEffacerCompartiment);
             this.Controls.Add(this.btnModifierCompartiment);
@@ -274,6 +286,7 @@
         private System.Windows.Forms.Button btnModifierCompartiment;
         private System.Windows.Forms.Button btnCreeCompartiment;
         private System.Windows.Forms.Button btnDetailCompartiment;
+        private System.Windows.Forms.Button btnRetour;
     }
 }
 

@@ -72,5 +72,14 @@ namespace Scance_23112020
             CompartimentForm compartimentForm = new CompartimentForm();
             compartimentForm.Show();
         }
+
+        /// <summary>
+        /// Permet de retourner a la page d'avant
+        /// </summary>
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            Program.menu.Visible = true;
+            this.Close();
+        }
     }
 }

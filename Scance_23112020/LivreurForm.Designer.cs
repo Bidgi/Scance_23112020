@@ -46,6 +46,7 @@
             this.dTP = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnRetour = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -218,11 +219,22 @@
             this.textBox1.Size = new System.Drawing.Size(110, 20);
             this.textBox1.TabIndex = 39;
             // 
+            // btnRetour
+            // 
+            this.btnRetour.Location = new System.Drawing.Point(227, 487);
+            this.btnRetour.Name = "btnRetour";
+            this.btnRetour.Size = new System.Drawing.Size(187, 27);
+            this.btnRetour.TabIndex = 61;
+            this.btnRetour.Text = "Retour";
+            this.btnRetour.UseVisualStyleBackColor = true;
+            this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
+            // 
             // LivreurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 511);
+            this.ClientSize = new System.Drawing.Size(439, 546);
+            this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -267,5 +279,6 @@
         private System.Windows.Forms.DateTimePicker dTP;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnRetour;
     }
 }

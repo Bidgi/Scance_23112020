@@ -42,9 +42,9 @@ namespace Scance_23112020.Model
             this.LesColis.Add(colis);
         }
         /// <summary> Raoul
-        /// 
+        /// permet de recuperer le boxs du compartiment sinon null
         /// </summary>
-        /// <returns></returns>
+        /// <returns> boxs ou null </returns>
         public Boxs GetBoxs()
         {
             foreach (Boxs unBoxs in Boxs.CollClassBox) if (unBoxs.LesCompartiment.Contains(this)) return unBoxs;

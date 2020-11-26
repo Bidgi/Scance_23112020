@@ -82,8 +82,8 @@ namespace Scance_23112020
         private void ColisForm_Load(object sender, EventArgs e)
         {
             DataTable data = new DataTable();
-            data.Columns.Add("ID", typeof(int));
-            data.Columns.Add("Volume", typeof(double));
+            data.Columns.Add("ID", typeof(string));
+            data.Columns.Add("Volume", typeof(string));
             data.Columns.Add("Client", typeof(string));
 
             dataGriedViewColis.Refresh();
@@ -97,6 +97,15 @@ namespace Scance_23112020
         private void dataGriedViewColis_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Permet de retourner a la page d'avant
+        /// </summary>
+        private void buttonRetour_Click(object sender, EventArgs e)
+        {
+            Program.menu.Visible = true;
+            this.Close();
         }
     }
 }

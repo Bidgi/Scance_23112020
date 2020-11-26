@@ -23,6 +23,8 @@ namespace Scance_23112020
         {
             compartiments = BoxForm.leCompartiment;
             Boxs boxs = compartiments.GetBoxs();
+            txtbPX.Text = compartiments.PositionX;
+            txtbPY.Text = compartiments.PositionY;
             string position = compartiments.PositionX + "" + compartiments.PositionY;
             foreach (Compartiments unCompartiment in boxs.LesCompartiment)
             {
@@ -108,7 +110,9 @@ namespace Scance_23112020
                 txtAdresseClient.Text = "libre";
             }
         }
-
+        /// <summary>
+        /// Permet d'affiche les informatique du colis selection dans la liste
+        /// </summary>
         private void lbColis_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (Colis unColis in compartiments.LesColis)
@@ -121,6 +125,13 @@ namespace Scance_23112020
                     break;
                 }
             }
+        }
+        /// <summary>
+        /// Permet de retourner a la page d'avant
+        /// </summary>
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

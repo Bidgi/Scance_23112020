@@ -56,10 +56,10 @@ namespace Scance_23112020.Model
             }
             return LaListeBox;
         }
-        /// <summary>
-        /// Raoul
-        /// 
+        /// <summary>Raoul
+        /// Permet d'ajouter le comparatiment en parametre a la liste des compartiment
         /// </summary>
+        /// <param name="unCompartiment"> le comparatiment </param>
         public void AddCompartiment(Compartiments unCompartiment)
         {
             this.LesCompartiment.Add(unCompartiment);

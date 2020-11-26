@@ -8,6 +8,7 @@ namespace Scance_23112020
 {
     static class Program
     {
+        internal static Menu menu;
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -16,7 +17,8 @@ namespace Scance_23112020
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            menu = new Menu();
+            Application.Run(menu);
         }
     }
 }
