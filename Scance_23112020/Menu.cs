@@ -181,18 +181,14 @@ namespace Scance_23112020
             lannionBoxs1Compartimen16.AddColis(grosColisIndi1);
             lannionBoxs1Compartimen16.AddColis(grosColisIndi2);
             #endregion
+
+            #region NewLivreur
+            Livreurs
         }
         private void btnVille_Click(object sender, EventArgs e)
         {
             VilleForm villeForm = new VilleForm();
             villeForm.Show();
-            this.Visible = false;
-        }
-
-        private void btnBox_Click(object sender, EventArgs e)
-        {
-            BoxForm boxForm = new BoxForm();
-            boxForm.Show();
             this.Visible = false;
         }
 

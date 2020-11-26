@@ -21,6 +21,7 @@ namespace Scance_23112020
         }
         private void Box_Load(object sender, EventArgs e)
         {
+            cbbBox.Items.Add("Nouvelle Box");
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
@@ -36,16 +37,62 @@ namespace Scance_23112020
             foreach (Compartiments unCompartiment in ((KeyValuePair<Boxs, string>)cbbBox.SelectedItem).Key.LesCompartiment)
                 dt.Rows.Add(new string[] { unCompartiment.PositionX, unCompartiment.PositionY, unCompartiment.LesColis.Count().ToString() });
             dataGridView1.DataSource = dt;
+            foreach (Boxs unBoxs in VilleForm.laVille.LesBox)
+            {
+                if(cbbBox.SelectedItem.ToString() == unBoxs.Id)
+                {
+                    txtAddressBox.Text = unBoxs.Adresse;
+                    txtIDBox.Text = unBoxs.Id;
+                }
+            }
         }
         private void cbbVilleBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-        private void btnCreeCompartiment_Click(object sender, EventArgs e)
+        private void btnCreeBox_Click(object sender, EventArgs e)
         {
-
+            if (cbbBox.Text == "Nouvelle Box")
+            {
+                labelErreur.Text = "Une ville possède déjà cette ID";
+                labelErreur.Visible = false;
+                if (txtAddressBox.Text != "")
+                {
+                   new Boxs(txtIDBox.Text, txtAddressBox.Text, new GeoCoordinate());
+                }
+                else
+                {
+                    labelErreur.Text = "L'adresse n'est pas valide";
+                    labelErreur.Visible = true;
+                }
+            }
+            else
+            {
+                labelErreur.Text = "Une ville possède déjà cette ID";
+                labelErreur.Visible = true;
+            }
         }
-        private void btnModifierCompartiment_Click(object sender, EventArgs e)
+
+        private void btnModifierBox_Click(object sender, EventArgs e)
+        {
+            foreach (Boxs unBoxs in VilleForm.laVille.LesBox)
+            {
+                if (unBoxs.Id == txtIDBox.Text)
+                {
+                    if (txtAddressBox.Text != "")
+                    {
+                        unBoxs.Adresse = txtAddressBox.Text;
+                    }
+                    else
+                    {
+                        labelErreur.Text = "L'adresse n'est pas valide";
+                        labelErreur.Visible = true;
+                    }
+                }
+            }
+        }
+
+        private void btnEffacerBox_Click(object sender, EventArgs e)
         {
 
         }

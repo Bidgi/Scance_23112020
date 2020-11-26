@@ -133,7 +133,7 @@ namespace Scance_23112020
 
         private void btnDétailBox_Click(object sender, EventArgs e)
         {
-            laVille = 
+            foreach (Villes uneVille in Villes.CollClassVille) if (uneVille.Id == int.Parse(textBoxId.Text)) laVille = uneVille;
             BoxForm boxForm = new BoxForm();
             boxForm.Show();
             this.Visible = false;

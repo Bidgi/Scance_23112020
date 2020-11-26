@@ -32,9 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.txtAddressBox = new System.Windows.Forms.TextBox();
-            this.txtCodePostalBox = new System.Windows.Forms.TextBox();
             this.cbbVilleBox = new System.Windows.Forms.ComboBox();
             this.btnCreeBox = new System.Windows.Forms.Button();
             this.btnModifierBox = new System.Windows.Forms.Button();
@@ -45,6 +43,7 @@
             this.txtIDBox = new System.Windows.Forms.TextBox();
             this.btnDetailCompartiment = new System.Windows.Forms.Button();
             this.btnRetour = new System.Windows.Forms.Button();
+            this.labelErreur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 43);
+            this.label2.Location = new System.Drawing.Point(9, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(24, 13);
             this.label2.TabIndex = 1;
@@ -70,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(115, 43);
+            this.label3.Location = new System.Drawing.Point(115, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 2;
@@ -79,75 +78,62 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 82);
+            this.label4.Location = new System.Drawing.Point(9, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(32, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Ville :";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 83);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Code postal :";
-            // 
             // txtAddressBox
             // 
-            this.txtAddressBox.Location = new System.Drawing.Point(118, 59);
+            this.txtAddressBox.Location = new System.Drawing.Point(118, 109);
             this.txtAddressBox.Name = "txtAddressBox";
             this.txtAddressBox.Size = new System.Drawing.Size(169, 20);
             this.txtAddressBox.TabIndex = 6;
             // 
-            // txtCodePostalBox
-            // 
-            this.txtCodePostalBox.Location = new System.Drawing.Point(187, 99);
-            this.txtCodePostalBox.Name = "txtCodePostalBox";
-            this.txtCodePostalBox.Size = new System.Drawing.Size(100, 20);
-            this.txtCodePostalBox.TabIndex = 7;
-            // 
             // cbbVilleBox
             // 
             this.cbbVilleBox.FormattingEnabled = true;
-            this.cbbVilleBox.Location = new System.Drawing.Point(12, 98);
+            this.cbbVilleBox.Location = new System.Drawing.Point(12, 148);
             this.cbbVilleBox.Name = "cbbVilleBox";
-            this.cbbVilleBox.Size = new System.Drawing.Size(169, 21);
+            this.cbbVilleBox.Size = new System.Drawing.Size(275, 21);
             this.cbbVilleBox.TabIndex = 8;
             this.cbbVilleBox.SelectedIndexChanged += new System.EventHandler(this.cbbVilleBox_SelectedIndexChanged);
             // 
             // btnCreeBox
             // 
-            this.btnCreeBox.Location = new System.Drawing.Point(12, 125);
+            this.btnCreeBox.Location = new System.Drawing.Point(12, 189);
             this.btnCreeBox.Name = "btnCreeBox";
             this.btnCreeBox.Size = new System.Drawing.Size(84, 23);
             this.btnCreeBox.TabIndex = 9;
             this.btnCreeBox.Text = "Créer";
             this.btnCreeBox.UseVisualStyleBackColor = true;
+            this.btnCreeBox.Click += new System.EventHandler(this.btnCreeBox_Click);
             // 
             // btnModifierBox
             // 
-            this.btnModifierBox.Location = new System.Drawing.Point(102, 125);
+            this.btnModifierBox.Location = new System.Drawing.Point(102, 189);
             this.btnModifierBox.Name = "btnModifierBox";
             this.btnModifierBox.Size = new System.Drawing.Size(84, 23);
             this.btnModifierBox.TabIndex = 10;
             this.btnModifierBox.Text = "Modifier";
             this.btnModifierBox.UseVisualStyleBackColor = true;
+            this.btnModifierBox.Click += new System.EventHandler(this.btnModifierBox_Click);
             // 
             // btnEffacerBox
             // 
-            this.btnEffacerBox.Location = new System.Drawing.Point(192, 125);
+            this.btnEffacerBox.Location = new System.Drawing.Point(192, 189);
             this.btnEffacerBox.Name = "btnEffacerBox";
             this.btnEffacerBox.Size = new System.Drawing.Size(95, 23);
             this.btnEffacerBox.TabIndex = 11;
             this.btnEffacerBox.Text = "Effacer";
             this.btnEffacerBox.UseVisualStyleBackColor = true;
+            this.btnEffacerBox.Click += new System.EventHandler(this.btnEffacerBox_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 204);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 218);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(275, 150);
             this.dataGridView1.TabIndex = 12;
@@ -156,7 +142,7 @@
             // cbbBox
             // 
             this.cbbBox.FormattingEnabled = true;
-            this.cbbBox.Location = new System.Drawing.Point(12, 177);
+            this.cbbBox.Location = new System.Drawing.Point(12, 69);
             this.cbbBox.Name = "cbbBox";
             this.cbbBox.Size = new System.Drawing.Size(275, 21);
             this.cbbBox.TabIndex = 13;
@@ -165,7 +151,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 161);
+            this.label6.Location = new System.Drawing.Point(9, 53);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 13);
             this.label6.TabIndex = 14;
@@ -173,14 +159,14 @@
             // 
             // txtIDBox
             // 
-            this.txtIDBox.Location = new System.Drawing.Point(12, 59);
+            this.txtIDBox.Location = new System.Drawing.Point(12, 109);
             this.txtIDBox.Name = "txtIDBox";
             this.txtIDBox.Size = new System.Drawing.Size(100, 20);
             this.txtIDBox.TabIndex = 5;
             // 
             // btnDetailCompartiment
             // 
-            this.btnDetailCompartiment.Location = new System.Drawing.Point(12, 360);
+            this.btnDetailCompartiment.Location = new System.Drawing.Point(12, 374);
             this.btnDetailCompartiment.Name = "btnDetailCompartiment";
             this.btnDetailCompartiment.Size = new System.Drawing.Size(84, 23);
             this.btnDetailCompartiment.TabIndex = 18;
@@ -190,7 +176,7 @@
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(100, 389);
+            this.btnRetour.Location = new System.Drawing.Point(100, 403);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(187, 27);
             this.btnRetour.TabIndex = 19;
@@ -198,11 +184,23 @@
             this.btnRetour.UseVisualStyleBackColor = true;
             this.btnRetour.Click += new System.EventHandler(this.btnRetour_Click);
             // 
+            // labelErreur
+            // 
+            this.labelErreur.AutoSize = true;
+            this.labelErreur.ForeColor = System.Drawing.Color.Red;
+            this.labelErreur.Location = new System.Drawing.Point(11, 172);
+            this.labelErreur.Name = "labelErreur";
+            this.labelErreur.Size = new System.Drawing.Size(155, 13);
+            this.labelErreur.TabIndex = 20;
+            this.labelErreur.Text = "Une ville possède déjà cette ID";
+            this.labelErreur.Visible = false;
+            // 
             // BoxForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(315, 511);
+            this.Controls.Add(this.labelErreur);
             this.Controls.Add(this.btnRetour);
             this.Controls.Add(this.btnDetailCompartiment);
             this.Controls.Add(this.label6);
@@ -212,10 +210,8 @@
             this.Controls.Add(this.btnModifierBox);
             this.Controls.Add(this.btnCreeBox);
             this.Controls.Add(this.cbbVilleBox);
-            this.Controls.Add(this.txtCodePostalBox);
             this.Controls.Add(this.txtAddressBox);
             this.Controls.Add(this.txtIDBox);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -235,9 +231,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtAddressBox;
-        private System.Windows.Forms.TextBox txtCodePostalBox;
         private System.Windows.Forms.ComboBox cbbVilleBox;
         private System.Windows.Forms.Button btnCreeBox;
         private System.Windows.Forms.Button btnModifierBox;
@@ -248,6 +242,7 @@
         private System.Windows.Forms.TextBox txtIDBox;
         private System.Windows.Forms.Button btnDetailCompartiment;
         private System.Windows.Forms.Button btnRetour;
+        private System.Windows.Forms.Label labelErreur;
     }
 }
 
