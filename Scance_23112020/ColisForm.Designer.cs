@@ -44,12 +44,13 @@
             // 
             // buttonRetour
             // 
-            this.buttonRetour.Location = new System.Drawing.Point(29, 602);
+            this.buttonRetour.Location = new System.Drawing.Point(426, 616);
             this.buttonRetour.Name = "buttonRetour";
             this.buttonRetour.Size = new System.Drawing.Size(101, 39);
             this.buttonRetour.TabIndex = 0;
             this.buttonRetour.Text = "Retour";
             this.buttonRetour.UseVisualStyleBackColor = true;
+            this.buttonRetour.Click += new System.EventHandler(this.buttonRetour_Click);
             // 
             // buttonLivre
             // 

@@ -24,7 +24,16 @@ namespace Scance_23112020
 
         private void comboBoxVille_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        /// <summary>
+        /// Permet de retourner a la page d'avant
+        /// </summary>
+        private void btnRetour_Click(object sender, EventArgs e)
+        {
+            Program.menu.Visible = true;
+            this.Close();
         }
     }
 }
