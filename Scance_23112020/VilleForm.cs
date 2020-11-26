@@ -26,28 +26,34 @@ namespace Scance_23112020
                 textBoxVille.Text = "";
                 textBoxCP.Text = "";
             }
-            int IDDeVille = comboBoxVille.SelectedIndex + 2;
-            foreach (Villes uneVille in Villes.CollClassVille)
+            else
             {
-                if (uneVille.Id == IDDeVille)
+                int IDDeVille = comboBoxVille.SelectedIndex + 2;
+                Villes laVille = null;
+                foreach (Villes uneVille in Villes.CollClassVille)
                 {
-                    textBoxId.Text = ""+uneVille.Id;
-                    textBoxVille.Text = uneVille.Nom;
-                    textBoxCP.Text = ""+uneVille.Codepostal;
+                    if (uneVille.Id == IDDeVille)
+                    {
+                        textBoxId.Text = ""+uneVille.Id;
+                        textBoxVille.Text = uneVille.Nom;
+                        textBoxCP.Text = ""+uneVille.Codepostal;
+                        laVille = uneVille;
+                    }
                 }
-            }
-            {
                 DataTable data = new DataTable();
                 data.Columns.Add("ID", typeof(int));
                 data.Columns.Add("Adresse", typeof(string));
 
                 dataGridViewBoxs.Refresh();
-                foreach (Boxs uneBox in Boxs.CollClassBox)
+                foreach (Boxs uneBox in laVille.LesBox)
                 {
                     data.Rows.Add(uneBox.Id, uneBox.Adresse);
+
                 }
                 dataGridViewBoxs.DataSource = data;
             }
+            int IDDeVille = comboBoxVille.SelectedIndex + 2;
+            
         }
 
         private void ButtonCreer_Click(object sender, EventArgs e)
