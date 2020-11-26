@@ -183,7 +183,9 @@ namespace Scance_23112020
             #endregion
 
             #region NewLivreur
-            Livreurs
+            Livreurs l1 = new Livreurs("1", "Malo");
+            Livreurs l2 = new Livreurs("2", "Galaad");
+            #endregion
         }
         private void btnVille_Click(object sender, EventArgs e)
         {
