@@ -56,6 +56,15 @@ namespace Scance_23112020.Model
             }
             return LaListeBox;
         }
+        public static int retourNouvelleId()
+        {
+            int x = 0;
+            foreach (Boxs uneBox in CollClassBox)
+            {
+                x++;
+            }
+            return x;
+        }
         /// <summary>Raoul
         /// Permet d'ajouter le comparatiment en parametre a la liste des compartiment
         /// </summary>

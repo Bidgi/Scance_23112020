@@ -23,7 +23,7 @@ namespace Scance_23112020
         {
             if (comboBoxVille.Text == "Nouvelles Villes")
             {
-                textBoxId.Text = ""+Villes.retourNouvelleId();
+                textBoxId.Text = Villes.retourNouvelleId().ToString();
                 textBoxVille.Text = "";
                 textBoxCP.Text = "";
             }
@@ -35,9 +35,9 @@ namespace Scance_23112020
                 {
                     if (uneVille.Id == IDDeVille)
                     {
-                        textBoxId.Text = ""+uneVille.Id;
+                        textBoxId.Text = uneVille.Id.ToString();
                         textBoxVille.Text = uneVille.Nom;
-                        textBoxCP.Text = ""+uneVille.Codepostal;
+                        textBoxCP.Text = uneVille.Codepostal.ToString();
                         laVille = uneVille;
                     }
                 }
@@ -137,6 +137,11 @@ namespace Scance_23112020
             BoxForm boxForm = new BoxForm();
             boxForm.Show();
             this.Visible = false;
+        }
+
+        private void textBoxId_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

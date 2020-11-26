@@ -36,10 +36,10 @@ namespace Scance_23112020
                 {
                     textBoxNom.Text = unClient.getLeNom();
                     textBoxPrenom.Text = unClient.getLePrenom();
-                    textBoxID.Text =""+ unClient.getLId();
+                    textBoxID.Text =unClient.getLId().ToString();
                     textBoxAdresse.Text = unClient.getLAdresse();
                     comboBoxVille.Text = unClient.getLaVille().Nom;
-                    textBoxCP.Text = "" + unClient.getLaVille().Codepostal;
+                    textBoxCP.Text = unClient.getLaVille().Codepostal.ToString();
                 }
             }
         }

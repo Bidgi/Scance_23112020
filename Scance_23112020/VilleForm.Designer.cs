@@ -65,10 +65,12 @@
             // 
             // textBoxId
             // 
+            this.textBoxId.Enabled = false;
             this.textBoxId.Location = new System.Drawing.Point(69, 116);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(100, 20);
             this.textBoxId.TabIndex = 2;
+            this.textBoxId.TextChanged += new System.EventHandler(this.textBoxId_TextChanged);
             // 
             // textBoxVille
             // 

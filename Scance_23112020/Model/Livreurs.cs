@@ -31,6 +31,16 @@ namespace Scance_23112020.Model
 
         #region Méthodes
         public Dictionary<DateTime, Boxs> getLivraison() { return Livraison; }
+
+        public static int retourNouvelleId()
+        {
+            int x = 0;
+            foreach (Livreurs unLivreur in CollClassLivreur)
+            {
+                x++;
+            }
+            return x;
+        }
         #endregion
     }
 }
