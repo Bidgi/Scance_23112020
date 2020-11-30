@@ -36,9 +36,8 @@ namespace Scance_23112020
                 {
                     textBoxNom.Text = unClient.getLeNom();
                     textBoxPrenom.Text = unClient.getLePrenom();
-                    textBoxAdresse.Text = unClient.getLAdresse();
-                    comboBoxVille.Text = unClient.getLaVille().Nom;
-                    textBoxCP.Text = unClient.getLaVille().Codepostal.ToString();
+                    textBoxAdresse.Text = unClient.getLAdresse().Adresse;
+                    textBoxCP.Text = unClient.getLAdresse().LaVille.Codepostal.ToString();
                     dataGridView1.Refresh();
                     foreach (Colis unColis in Colis.collLesColis)
                     {
@@ -61,11 +60,6 @@ namespace Scance_23112020
                             textBox.Text = unClientIndi.Coupon.ToString();
                         }
                     }
-                }
-            }
-        }
-                    textBoxAdresse.Text = unClient.getLAdresse().Adresse;
-                    textBoxCP.Text = unClient.getLAdresse().LaVille.Codepostal.ToString();
                 }
             }
         }
@@ -93,7 +87,7 @@ namespace Scance_23112020
                                 if (textBoxAdresse.Text != "")
                                 {
                                     labelErreur.Visible = false;
-                                    Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, textBoxAdresse.Text, Villes.retourVilleId(int.Parse(comboBoxVille.Text)));
+                                    Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, new Adresses(Villes.retourVilleId(int.Parse(comboBoxVille.Text)),textBoxAdresse.Text, Adresses.retourNouvelleId()));
                                     comboBoxClient.Refresh();
                                     foreach (Client unClientRefresh in Client.CollLesClients)
                                     {
@@ -156,8 +150,7 @@ namespace Scance_23112020
                                     {
                                         unClient.Nom = textBoxNom.Text;
                                         unClient.Prenom = textBoxPrenom.Text;
-                                        unClient.Adresse = textBoxAdresse.Text;
-                                        unClient.Ville = Villes.retourVilleId(int.Parse(comboBoxVille.Text));
+                                        unClient.Adresse.NouvelleAdresse(textBoxAdresse.Text);
                                         comboBoxClient.Refresh();
                                         foreach (Client unClientRefresh in Client.CollLesClients)
                                         {
