@@ -23,7 +23,7 @@ namespace Scance_23112020
         {
             if (comboBoxVille.Text == "Nouvelles Villes")
             {
-                textBoxId.Text = Utilitaire.retourNouvelleId(Villes.CollClassVille).ToString();
+                textBoxId.Text = Utilitaire.RetourNouvelleId(Villes.CollClassVille).ToString();
                 textBoxVille.Text = "";
                 textBoxCP.Text = "";
                 txtPays.Text = "";

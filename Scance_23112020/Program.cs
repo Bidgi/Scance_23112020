@@ -133,8 +133,8 @@ namespace Scance_23112020
             #endregion
 
             #region NewClient
-            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", new Adresses(pléhédel, "4 rue de l'argoat"), 0, 0);
-            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", new Adresses(lannion, "37 Rue des Cordiers"), 0);
+            Client_Pro client_Pro = new Client_Pro("girardin", "raoul", new Adresses(pléhédel, "4 rue de l'argoat"), 0, 0);
+            Client_Indi client_Indi = new Client_Indi("jezequel", "ewen", new Adresses(lannion, "37 Rue des Cordiers"), 0);
             #endregion
 
             #region NewColis

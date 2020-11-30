@@ -9,7 +9,10 @@ namespace Scance_23112020.Model
 {
     class Utilitaire
     {
-        public static int retourNouvelleId<T>(List<T> uneListe)
+        /// <summary> raoul
+        /// permet de retouner un int (id) de la liste en parametre 
+        /// </summary>
+        public static int RetourNouvelleId<T>(List<T> uneListe)
         {
             int x = 0;
             for (int i = 0; i < uneListe.Count; i++)

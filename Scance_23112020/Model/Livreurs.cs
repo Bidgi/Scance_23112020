@@ -18,7 +18,7 @@ namespace Scance_23112020.Model
         #region Constructeur
         public Livreurs(string nom)
         {
-            Id = Utilitaire.retourNouvelleId(CollClassLivreur);
+            Id = Utilitaire.RetourNouvelleId(CollClassLivreur);
             Nom = nom;
             CollClassLivreur.Add(this);
         }

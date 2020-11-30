@@ -22,7 +22,7 @@ namespace Scance_23112020.Model
         }
 		public Colis(string unVolume, Client unClient)
 		{
-			Id = Utilitaire.retourNouvelleId(collLesColis);
+			Id = Utilitaire.RetourNouvelleId(collLesColis);
 			Volume = unVolume;
 			LeClient = unClient;
 			collLesColis.Add(this);
