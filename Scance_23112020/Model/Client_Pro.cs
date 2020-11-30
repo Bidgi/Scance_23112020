@@ -1,4 +1,4 @@
-﻿ using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Device.Location;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeurs
-        public Client_Pro (int uneId, string unNom, string unPrenom, Adresses uneAdresse, double unVolume, double uneRemise) : base ( uneId,  unNom,  unPrenom,  uneAdresse)
+        public Client_Pro ( string unNom, string unPrenom, Adresses uneAdresse, double unVolume, double uneRemise) : base ( unNom,  unPrenom,  uneAdresse)
         {
             VolumeNegocie = unVolume;
             Remise = uneRemise;
