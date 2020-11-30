@@ -94,7 +94,7 @@
             // cbbVilleBox
             // 
             this.cbbVilleBox.FormattingEnabled = true;
-            this.cbbVilleBox.Location = new System.Drawing.Point(12, 148);  
+            this.cbbVilleBox.Location = new System.Drawing.Point(12, 148);
             this.cbbVilleBox.Name = "cbbVilleBox";
             this.cbbVilleBox.Size = new System.Drawing.Size(275, 21);
             this.cbbVilleBox.TabIndex = 8;
@@ -158,6 +158,7 @@
             // 
             // txtIDBox
             // 
+            this.txtIDBox.Enabled = false;
             this.txtIDBox.Location = new System.Drawing.Point(12, 109);
             this.txtIDBox.Name = "txtIDBox";
             this.txtIDBox.Size = new System.Drawing.Size(100, 20);
