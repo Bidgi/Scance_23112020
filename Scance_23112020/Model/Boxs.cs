@@ -10,15 +10,15 @@ namespace Scance_23112020.Model
     public class Boxs // raoul 
     {
         #region Attributs
-        public static Dictionary<Boxs, string> DictionnaireBoxs = new Dictionary<Boxs, string>();
+        public static Dictionary<Boxs, int> DictionnaireBoxs = new Dictionary<Boxs, int>();
         public static List<Boxs> CollClassBox = new List<Boxs>();
-        private string _id;
+        private int _id;
         private Adresses _adresse;
         private List<Compartiments> _lesCompartiment;
         #endregion
 
         #region Constructeur
-        public Boxs(string id, Adresses adresse)
+        public Boxs(int id, Adresses adresse)
         {
             Id = id;
             Adresse = adresse;
@@ -29,7 +29,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Getters-Setters
-        public string Id { get => _id; set => _id = value; }
+        public int Id { get => _id; set => _id = value; }
         public Adresses Adresse { get => _adresse; set => _adresse = value; }
         internal List<Compartiments> LesCompartiment { get => _lesCompartiment; set => _lesCompartiment = value; }
         #endregion

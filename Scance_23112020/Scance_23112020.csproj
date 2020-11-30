@@ -102,6 +102,7 @@
     <Compile Include="Model\Boxs.cs" />
     <Compile Include="Model\Compartiments.cs" />
     <Compile Include="Model\Livreurs.cs" />
+    <Compile Include="Model\Utilitaire.cs" />
     <Compile Include="Model\Villes.cs" />
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Client_Indi.cs" />

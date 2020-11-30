@@ -47,12 +47,19 @@ namespace Scance_23112020
         }
         private void cbbLivreur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
+            if (cbbLivreur.Text == "Nouvelles Villes")
             {
-                if (unLivreur.Nom == cbbLivreur.SelectedItem.ToString())
+                txtID.Text = Utilitaire.retourNouvelleId(Livreurs.CollClassLivreur).ToString();
+            }
+            else
+            {
+                foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
                 {
-                    txtID.Text = unLivreur.Id;
-                    txtNom.Text = unLivreur.Nom;
+                    if (unLivreur.Nom == cbbLivreur.SelectedItem.ToString())
+                    {
+                        txtID.Text = unLivreur.Id.ToString();
+                        txtNom.Text = unLivreur.Nom;
+                    }
                 }
             }
         }
