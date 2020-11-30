@@ -21,7 +21,7 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeurs
-        public Adresses(Villes laVille, string adresse, int id)
+        public Adresses(Villes laVille, string adresse)
         {
             LaVille = laVille;
             Adresse = adresse;
@@ -31,7 +31,7 @@ namespace Scance_23112020.Model
                 GeoCoordinate = new GeoCoordinate(latLng.ElementAt(0), latLng.ElementAt(1));
             }
             else GeoCoordinate = new GeoCoordinate();
-            Id = id;
+            Id = Utilitaire.retourNouvelleId(CollClasseAdresse);
             CollClasseAdresse.Add(this);
         }
         #endregion

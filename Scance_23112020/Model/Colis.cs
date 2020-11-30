@@ -9,7 +9,7 @@ namespace Scance_23112020.Model
     public class Colis
     {
 		#region Attributs
-		private string _id;
+		private int _id;
 		private string _volume;
 		private string _etat;
 		private Client _leClient;
@@ -20,9 +20,9 @@ namespace Scance_23112020.Model
 		public Colis()
         {
         }
-		public Colis(string unId, string unVolume, Client unClient)
+		public Colis(string unVolume, Client unClient)
 		{
-			Id = unId;
+			Id = Utilitaire.retourNouvelleId(collLesColis);
 			Volume = unVolume;
 			LeClient = unClient;
 			collLesColis.Add(this);
@@ -31,7 +31,7 @@ namespace Scance_23112020.Model
 
 		#region Getters Setters
 		public Client LeClient { get => _leClient; set => _leClient = value; }
-		public string Id { get => _id; set => _id = value; }
+		public int Id { get => _id; set => _id = value; }
 		public string Volume { get => _volume; set => _volume = value; }
 		public string Etat { get => _etat; set => _etat = value; }
 		#endregion

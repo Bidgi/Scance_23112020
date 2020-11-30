@@ -18,9 +18,9 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Villes(int id, string nom, int codepostal, string nomPays)
+        public Villes(string nom, int codepostal, string nomPays)
         {
-            Id = id;
+            Id = Utilitaire.retourNouvelleId(CollClassVille);
             Nom = nom;
             Codepostal = codepostal;
             Pays = nomPays;

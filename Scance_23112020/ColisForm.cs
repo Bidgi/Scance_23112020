@@ -62,6 +62,7 @@ namespace Scance_23112020
                                     {
                                         if (uneLivraison.Value == laBoxeLaPlusProche)
                                         {
+
                                             textLivreur.Text = unLivreur.Nom;
                                         }
                                     }

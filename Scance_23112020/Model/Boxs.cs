@@ -18,9 +18,9 @@ namespace Scance_23112020.Model
         #endregion
 
         #region Constructeur
-        public Boxs(int id, Adresses adresse)
+        public Boxs(Adresses adresse)
         {
-            Id = id;
+            Id = Utilitaire.retourNouvelleId(CollClassBox);
             Adresse = adresse;
             LesCompartiment = new List<Compartiments>();
             CollClassBox.Add(this);

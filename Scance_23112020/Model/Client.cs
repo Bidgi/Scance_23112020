@@ -21,9 +21,9 @@ namespace Scance_23112020.Model
         public Client()
         {
         }
-        public Client(int unId,string unNom, string unPrenom, Adresses uneAdresse)
+        public Client(string unNom, string unPrenom, Adresses uneAdresse)
         {
-            Id = unId;
+            Id = Utilitaire.retourNouvelleId(CollLesClients);
             Nom = unNom;
             Prenom = unPrenom;
             Adresse = uneAdresse;
