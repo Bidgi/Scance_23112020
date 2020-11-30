@@ -22,24 +22,25 @@ namespace Scance_23112020
         private void Menu_Load(object sender, EventArgs e)
         {
             #region NewVille
-            Villes lannion = new Villes(1, "Lannion", 22300);
-            Villes rennes = new Villes(2, "Renne", 35000);
-            Villes brest = new Villes(3, "Brest", 29200);
-            Villes stBrieux = new Villes(4, "StBrieux", 22000);
-            Villes paris = new Villes(5, "Paris", 75000);
+            Villes lannion = new Villes(1, "Lannion", 22300, "France");
+            Villes rennes = new Villes(2, "Renne", 35000, "France");
+            Villes brest = new Villes(3, "Brest", 29200, "France");
+            Villes stBrieux = new Villes(4, "StBrieux", 22000, "France");
+            Villes paris = new Villes(5, "Paris", 75000, "France");
+            Villes pléhédel = new Villes(6, "pléhédel", 22290, "France");
             #endregion
 
             #region NewBoxs
-            Boxs lannionboxs1 = new Boxs("1", "non renseigner", new GeoCoordinate());
-            Boxs lannionboxs2 = new Boxs("2", "non renseigner", new GeoCoordinate());
-            Boxs rennesboxs1 = new Boxs("3", "non renseigner", new GeoCoordinate());
-            Boxs rennesboxs2 = new Boxs("4", "non renseigner", new GeoCoordinate());
-            Boxs brestboxs1 = new Boxs("5", "non renseigner", new GeoCoordinate());
-            Boxs brestboxs2 = new Boxs("6", "non renseigner", new GeoCoordinate());
-            Boxs stBrieuxboxs1 = new Boxs("7", "non renseigner", new GeoCoordinate());
-            Boxs stBrieuxboxs2 = new Boxs("8", "non renseigner", new GeoCoordinate());
-            Boxs parisboxs1 = new Boxs("9", "non renseigner", new GeoCoordinate());
-            Boxs parisboxs2 = new Boxs("10", "non renseigner", new GeoCoordinate());
+            Boxs lannionboxs1 = new Boxs("1", new Adresses(lannion, "non renseigner", 0));
+            Boxs lannionboxs2 = new Boxs("2", new Adresses(lannion, "non renseigner", 1));
+            Boxs rennesboxs1 = new Boxs("3", new Adresses(lannion, "non renseigner", 2));
+            Boxs rennesboxs2 = new Boxs("4", new Adresses(lannion, "non renseigner", 3));
+            Boxs brestboxs1 = new Boxs("5", new Adresses(lannion, "non renseigner", 4));
+            Boxs brestboxs2 = new Boxs("6", new Adresses(lannion, "non renseigner", 5));
+            Boxs stBrieuxboxs1 = new Boxs("7", new Adresses(lannion, "non renseigner", 6));
+            Boxs stBrieuxboxs2 = new Boxs("8", new Adresses(lannion, "non renseigner", 7));
+            Boxs parisboxs1 = new Boxs("9", new Adresses(lannion, "non renseigner", 8));
+            Boxs parisboxs2 = new Boxs("10", new Adresses(lannion, "non renseigner", 9));
             #endregion
 
             #region AddBox
@@ -140,8 +141,8 @@ namespace Scance_23112020
             #endregion
 
             #region NewClient
-            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", "4 rue de l'argoat", lannion, new GeoCoordinate(),0,0);
-            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", "1 rue de l'argoat", lannion, new GeoCoordinate(), 0);
+            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", new Adresses(pléhédel, "4 rue de l'argoat", Adresses.retourNouvelleId()),0,0);
+            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", new Adresses(lannion, "37 Rue des Cordiers", Adresses.retourNouvelleId()), 0);
             #endregion
 
             #region NewColis

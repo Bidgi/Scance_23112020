@@ -42,13 +42,15 @@
             this.labelErreur = new System.Windows.Forms.Label();
             this.btnRetour = new System.Windows.Forms.Button();
             this.btnDétailBox = new System.Windows.Forms.Button();
+            this.txtPays = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoxs)).BeginInit();
             this.SuspendLayout();
             // 
             // labelIDVille
             // 
             this.labelIDVille.AutoSize = true;
-            this.labelIDVille.Location = new System.Drawing.Point(66, 99);
+            this.labelIDVille.Location = new System.Drawing.Point(66, 75);
             this.labelIDVille.Name = "labelIDVille";
             this.labelIDVille.Size = new System.Drawing.Size(18, 13);
             this.labelIDVille.TabIndex = 0;
@@ -57,7 +59,7 @@
             // labelNomVille
             // 
             this.labelNomVille.AutoSize = true;
-            this.labelNomVille.Location = new System.Drawing.Point(201, 100);
+            this.labelNomVille.Location = new System.Drawing.Point(66, 121);
             this.labelNomVille.Name = "labelNomVille";
             this.labelNomVille.Size = new System.Drawing.Size(26, 13);
             this.labelNomVille.TabIndex = 1;
@@ -66,7 +68,7 @@
             // textBoxId
             // 
             this.textBoxId.Enabled = false;
-            this.textBoxId.Location = new System.Drawing.Point(69, 116);
+            this.textBoxId.Location = new System.Drawing.Point(69, 92);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(100, 20);
             this.textBoxId.TabIndex = 2;
@@ -74,14 +76,14 @@
             // 
             // textBoxVille
             // 
-            this.textBoxVille.Location = new System.Drawing.Point(204, 116);
+            this.textBoxVille.Location = new System.Drawing.Point(69, 137);
             this.textBoxVille.Name = "textBoxVille";
-            this.textBoxVille.Size = new System.Drawing.Size(100, 20);
+            this.textBoxVille.Size = new System.Drawing.Size(259, 20);
             this.textBoxVille.TabIndex = 3;
             // 
             // buttonCreer
             // 
-            this.buttonCreer.Location = new System.Drawing.Point(69, 193);
+            this.buttonCreer.Location = new System.Drawing.Point(69, 242);
             this.buttonCreer.Name = "buttonCreer";
             this.buttonCreer.Size = new System.Drawing.Size(75, 23);
             this.buttonCreer.TabIndex = 4;
@@ -91,7 +93,7 @@
             // 
             // buttonModifier
             // 
-            this.buttonModifier.Location = new System.Drawing.Point(218, 193);
+            this.buttonModifier.Location = new System.Drawing.Point(218, 242);
             this.buttonModifier.Name = "buttonModifier";
             this.buttonModifier.Size = new System.Drawing.Size(75, 23);
             this.buttonModifier.TabIndex = 5;
@@ -101,7 +103,7 @@
             // 
             // buttonEffacer
             // 
-            this.buttonEffacer.Location = new System.Drawing.Point(359, 193);
+            this.buttonEffacer.Location = new System.Drawing.Point(359, 242);
             this.buttonEffacer.Name = "buttonEffacer";
             this.buttonEffacer.Size = new System.Drawing.Size(75, 23);
             this.buttonEffacer.TabIndex = 6;
@@ -112,7 +114,7 @@
             // dataGridViewBoxs
             // 
             this.dataGridViewBoxs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBoxs.Location = new System.Drawing.Point(69, 243);
+            this.dataGridViewBoxs.Location = new System.Drawing.Point(69, 292);
             this.dataGridViewBoxs.Name = "dataGridViewBoxs";
             this.dataGridViewBoxs.Size = new System.Drawing.Size(365, 150);
             this.dataGridViewBoxs.TabIndex = 7;
@@ -130,7 +132,7 @@
             // 
             // textBoxCP
             // 
-            this.textBoxCP.Location = new System.Drawing.Point(334, 116);
+            this.textBoxCP.Location = new System.Drawing.Point(334, 137);
             this.textBoxCP.Name = "textBoxCP";
             this.textBoxCP.Size = new System.Drawing.Size(100, 20);
             this.textBoxCP.TabIndex = 9;
@@ -138,7 +140,7 @@
             // labelCodePostal
             // 
             this.labelCodePostal.AutoSize = true;
-            this.labelCodePostal.Location = new System.Drawing.Point(331, 99);
+            this.labelCodePostal.Location = new System.Drawing.Point(331, 120);
             this.labelCodePostal.Name = "labelCodePostal";
             this.labelCodePostal.Size = new System.Drawing.Size(64, 13);
             this.labelCodePostal.TabIndex = 10;
@@ -148,7 +150,7 @@
             // 
             this.labelErreur.AutoSize = true;
             this.labelErreur.ForeColor = System.Drawing.Color.Red;
-            this.labelErreur.Location = new System.Drawing.Point(69, 174);
+            this.labelErreur.Location = new System.Drawing.Point(69, 223);
             this.labelErreur.Name = "labelErreur";
             this.labelErreur.Size = new System.Drawing.Size(155, 13);
             this.labelErreur.TabIndex = 11;
@@ -157,7 +159,7 @@
             // 
             // btnRetour
             // 
-            this.btnRetour.Location = new System.Drawing.Point(247, 399);
+            this.btnRetour.Location = new System.Drawing.Point(247, 448);
             this.btnRetour.Name = "btnRetour";
             this.btnRetour.Size = new System.Drawing.Size(187, 27);
             this.btnRetour.TabIndex = 11;
@@ -167,7 +169,7 @@
             // 
             // btnDétailBox
             // 
-            this.btnDétailBox.Location = new System.Drawing.Point(69, 399);
+            this.btnDétailBox.Location = new System.Drawing.Point(69, 448);
             this.btnDétailBox.Name = "btnDétailBox";
             this.btnDétailBox.Size = new System.Drawing.Size(75, 23);
             this.btnDétailBox.TabIndex = 12;
@@ -175,11 +177,30 @@
             this.btnDétailBox.UseVisualStyleBackColor = true;
             this.btnDétailBox.Click += new System.EventHandler(this.btnDétailBox_Click);
             // 
+            // txtPays
+            // 
+            this.txtPays.Enabled = false;
+            this.txtPays.Location = new System.Drawing.Point(175, 92);
+            this.txtPays.Name = "txtPays";
+            this.txtPays.Size = new System.Drawing.Size(259, 20);
+            this.txtPays.TabIndex = 13;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(172, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Pays";
+            // 
             // VilleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 438);
+            this.ClientSize = new System.Drawing.Size(508, 503);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtPays);
             this.Controls.Add(this.btnDétailBox);
             this.Controls.Add(this.labelErreur);
             this.Controls.Add(this.btnRetour);
@@ -219,5 +240,7 @@
         private System.Windows.Forms.Label labelErreur;
         private System.Windows.Forms.Button btnRetour;
         private System.Windows.Forms.Button btnDétailBox;
+        private System.Windows.Forms.TextBox txtPays;
+        private System.Windows.Forms.Label label1;
     }
 }

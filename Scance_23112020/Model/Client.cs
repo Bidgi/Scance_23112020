@@ -13,9 +13,7 @@ namespace Scance_23112020.Model
         private int _id;
         private string _nom;
         private string _prenom;
-        private string _adresse;
-        private Villes _ville;
-        private GeoCoordinate _gps;
+        private Adresses _adresse;
         public static List<Client> CollLesClients = new List<Client>();
         #endregion
 
@@ -23,23 +21,12 @@ namespace Scance_23112020.Model
         public Client()
         {
         }
-        public Client(int unId,string unNom, string unPrenom, string uneAdresse, Villes uneVille, GeoCoordinate unGPS)
+        public Client(int unId,string unNom, string unPrenom, Adresses uneAdresse)
         {
             Id = unId;
             Nom = unNom;
             Prenom = unPrenom;
             Adresse = uneAdresse;
-            Ville = uneVille;
-            GPS = unGPS;
-            CollLesClients.Add(this);
-        }
-        public Client(int unId, string unNom, string unPrenom, string uneAdresse, Villes uneVille)
-        {
-            Id = unId;
-            Nom = unNom;
-            Prenom = unPrenom;
-            Adresse = uneAdresse;
-            Ville = uneVille;
             CollLesClients.Add(this);
         }
         #endregion
@@ -48,18 +35,14 @@ namespace Scance_23112020.Model
         public int Id { get => _id; set => _id = value; }
         public string Nom { get => _nom; set => _nom = value; }
         public string Prenom { get => _prenom; set => _prenom = value; }
-        public string Adresse { get => _adresse; set => _adresse = value; }
-        public Villes Ville { get => _ville; set => _ville = value; }
-        public GeoCoordinate GPS { get => _gps; set => _gps = value; }
+        public Adresses Adresse { get => _adresse; set => _adresse = value; }
         #endregion
 
         #region Méthode 
         public int getLId() { return _id; }
         public string getLeNom() { return _nom; }
         public string getLePrenom() { return _prenom; }
-        public string getLAdresse() { return _adresse; }
-        public Villes getLaVille() { return _ville; }
-        public GeoCoordinate getGPS() { return _gps; }
+        public Adresses getLAdresse() { return _adresse; }
         #endregion
     }
 }

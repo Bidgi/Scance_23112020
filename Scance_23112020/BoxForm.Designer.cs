@@ -94,11 +94,10 @@
             // cbbVilleBox
             // 
             this.cbbVilleBox.FormattingEnabled = true;
-            this.cbbVilleBox.Location = new System.Drawing.Point(12, 148);
+            this.cbbVilleBox.Location = new System.Drawing.Point(12, 148);  
             this.cbbVilleBox.Name = "cbbVilleBox";
             this.cbbVilleBox.Size = new System.Drawing.Size(275, 21);
             this.cbbVilleBox.TabIndex = 8;
-            this.cbbVilleBox.SelectedIndexChanged += new System.EventHandler(this.cbbVilleBox_SelectedIndexChanged);
             // 
             // btnCreeBox
             // 

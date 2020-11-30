@@ -13,17 +13,15 @@ namespace Scance_23112020.Model
         public static Dictionary<Boxs, string> DictionnaireBoxs = new Dictionary<Boxs, string>();
         public static List<Boxs> CollClassBox = new List<Boxs>();
         private string _id;
-        private string _adresse;
-        private GeoCoordinate _gps;
+        private Adresses _adresse;
         private List<Compartiments> _lesCompartiment;
         #endregion
 
         #region Constructeur
-        public Boxs(string id, string adresse, GeoCoordinate gps)
+        public Boxs(string id, Adresses adresse)
         {
             Id = id;
             Adresse = adresse;
-            Gps = gps;
             LesCompartiment = new List<Compartiments>();
             CollClassBox.Add(this);
             DictionnaireBoxs.Add(this, Id);
@@ -32,8 +30,7 @@ namespace Scance_23112020.Model
 
         #region Getters-Setters
         public string Id { get => _id; set => _id = value; }
-        public string Adresse { get => _adresse; set => _adresse = value; }
-        public GeoCoordinate Gps { get => _gps; set => _gps = value; }
+        public Adresses Adresse { get => _adresse; set => _adresse = value; }
         internal List<Compartiments> LesCompartiment { get => _lesCompartiment; set => _lesCompartiment = value; }
         #endregion
 
@@ -47,7 +44,7 @@ namespace Scance_23112020.Model
         {
             List<List<object>> LaListe=new List<List<object>>();
             foreach (Boxs uneBoxe in CollClassBox)
-                LaListe.Add(new List<object>(){ uneBoxe, uneBoxe.Gps.GetDistanceTo(unClient.getGPS()) });
+                LaListe.Add(new List<object>(){ uneBoxe, uneBoxe.Adresse.GeoCoordinate.GetDistanceTo(unClient.Adresse.GeoCoordinate) });
             LaListe.OrderBy(o => o.ElementAt(1));
             List<Boxs> LaListeBox = new List<Boxs>();
             foreach (List<object> uneListe in LaListe)
