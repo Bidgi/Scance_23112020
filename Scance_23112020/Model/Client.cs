@@ -43,6 +43,18 @@ namespace Scance_23112020.Model
         public string getLeNom() { return _nom; }
         public string getLePrenom() { return _prenom; }
         public Adresses getLAdresse() { return _adresse; }
+        public static Client getClient(string unNom)
+        {
+            Client newClient = null;
+            foreach (Client unClient in Client.CollLesClients)
+            {
+                if (unClient.getLeNom() == unNom)
+                {
+                    newClient = unClient;
+                }
+            }
+            return newClient;
+        }
         #endregion
     }
 }

@@ -39,26 +39,35 @@ namespace Scance_23112020
                     textBoxAdresse.Text = unClient.getLAdresse().Adresse;
                     textBoxCP.Text = unClient.getLAdresse().LaVille.Codepostal.ToString();
                     dataGridView1.Refresh();
+                    DataTable data = new DataTable();
+                    data.Columns.Add("ID", typeof(string));
+                    data.Columns.Add("Volume", typeof(string));
+                    data.Columns.Add("Etat", typeof(string));
+
+                    dataGridView1.Refresh();
                     foreach (Colis unColis in Colis.collLesColis)
                     {
-                        data.Rows.Add(unColis.getLId(), unColis.getLeVolume(), unColis.getLeClient().getLeNom());
+                        if (unColis.getLeClient() == Client.getClient(textBoxNom.Text))
+                        {
+                            data.Rows.Add(unColis.getLId(), unColis.getLeVolume(), unColis.getLeClient().getLeNom());
+                        }
                     }
                     dataGridView1.DataSource = data;
-                    foreach ( Client_Pro unClientPro in Client_Pro.collLesClientPro)
+                }
+                foreach ( Client_Pro unClientPro in Client_Pro.collLesClientPro)
+                {
+                    if (unClientPro.getLId() == unClient.getLId())
                     {
-                        if (unClientPro.getLId() == unClient.getLId())
-                        {
-                            label.Text = "Dernière remise:";
-                            textBox.Text = unClientPro.Remise.ToString();
-                        }
+                        label.Text = "Dernière remise:";
+                        textBox.Text = unClientPro.Remise.ToString();
                     }
-                    foreach (Client_Indi unClientIndi in Client_Indi.collLesClientIndi)
+                }
+                foreach (Client_Indi unClientIndi in Client_Indi.collLesClientIndi)
+                {
+                    if (unClientIndi.getLId() == unClient.getLId())
                     {
-                        if (unClientIndi.getLId() == unClient.getLId())
-                        {
-                            label.Text = "Coupon:";
-                            textBox.Text = unClientIndi.Coupon.ToString();
-                        }
+                        label.Text = "Coupon:";
+                        textBox.Text = unClientIndi.Coupon.ToString();
                     }
                 }
             }
