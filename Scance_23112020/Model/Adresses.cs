@@ -27,11 +27,11 @@ namespace Scance_23112020.Model
             Adresse = adresse;
             if (adresse != "non renseigner")
             {
-                List<double> latLng = GetLatLong(LaVille.Nom + " " + LaVille.Codepostal + " " + Adresse + "," + LaVille.Pays);
+                List<double> latLng = GetLatLong(Adresse + " " + LaVille.Nom + " " + LaVille.Codepostal + "," + LaVille.Pays);
                 GeoCoordinate = new GeoCoordinate(latLng.ElementAt(0), latLng.ElementAt(1));
             }
             else GeoCoordinate = new GeoCoordinate();
-            Id = Utilitaire.retourNouvelleId(CollClasseAdresse);
+            Id = Utilitaire.RetourNouvelleId(CollClasseAdresse);
             CollClasseAdresse.Add(this);
         }
         #endregion

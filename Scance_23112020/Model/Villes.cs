@@ -20,7 +20,7 @@ namespace Scance_23112020.Model
         #region Constructeur
         public Villes(string nom, int codepostal, string nomPays)
         {
-            Id = Utilitaire.retourNouvelleId(CollClassVille);
+            Id = Utilitaire.RetourNouvelleId(CollClassVille);
             Nom = nom;
             Codepostal = codepostal;
             Pays = nomPays;

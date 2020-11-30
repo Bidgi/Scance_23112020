@@ -96,7 +96,7 @@ namespace Scance_23112020
                                 if (textBoxAdresse.Text != "")
                                 {
                                     labelErreur.Visible = false;
-                                    Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, new Adresses(Villes.retourVilleId(int.Parse(comboBoxVille.Text)),textBoxAdresse.Text, Utilitaire.retourNouvelleId(Adresses.CollClasseAdresse)));
+                                    Client unClient = new Client(textBoxNom.Text, textBoxPrenom.Text, new Adresses(Villes.retourVilleId(int.Parse(comboBoxVille.Text)),textBoxAdresse.Text));
                                     comboBoxClient.Refresh();
                                     foreach (Client unClientRefresh in Client.CollLesClients)
                                     {

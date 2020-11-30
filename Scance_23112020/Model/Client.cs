@@ -23,7 +23,7 @@ namespace Scance_23112020.Model
         }
         public Client(string unNom, string unPrenom, Adresses uneAdresse)
         {
-            Id = Utilitaire.retourNouvelleId(CollLesClients);
+            Id = Utilitaire.RetourNouvelleId(CollLesClients);
             Nom = unNom;
             Prenom = unPrenom;
             Adresse = uneAdresse;

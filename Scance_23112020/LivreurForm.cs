@@ -49,7 +49,7 @@ namespace Scance_23112020
         {
             if (cbbLivreur.Text == "Nouvelles Villes")
             {
-                txtID.Text = Utilitaire.retourNouvelleId(Livreurs.CollClassLivreur).ToString();
+                txtID.Text = Utilitaire.RetourNouvelleId(Livreurs.CollClassLivreur).ToString();
             }
             else
             {

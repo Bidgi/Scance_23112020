@@ -23,7 +23,7 @@ namespace Scance_23112020
         {
             if (comboBoxVille.Text == "Nouvelles Villes")
             {
-                textBoxId.Text = Utilitaire.retourNouvelleId(Villes.CollClassVille).ToString();
+                textBoxId.Text = Utilitaire.RetourNouvelleId(Villes.CollClassVille).ToString();
                 textBoxVille.Text = "";
                 textBoxCP.Text = "";
                 txtPays.Text = "";
@@ -68,7 +68,7 @@ namespace Scance_23112020
                     {
                         if (textBoxCP.Text != "")
                         {
-                            new Villes(int.Parse(textBoxId.Text), textBoxVille.Text, int.Parse(textBoxCP.Text), txtPays.Text);
+                            new Villes(textBoxVille.Text, int.Parse(textBoxCP.Text), txtPays.Text);
                             comboBoxVille.Refresh();
                             foreach (Client unClient in Client.CollLesClients)
                             {

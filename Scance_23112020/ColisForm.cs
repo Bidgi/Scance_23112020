@@ -22,14 +22,14 @@ namespace Scance_23112020
         private void buttonLivre_Click(object sender, EventArgs e)
         {
             string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
-            Colis.ReturnColis(idColis).Etat = "Livré";
+            Colis.ReturnColis(int.Parse(idColis)).Etat = "Livré";
         }
 
         private void buttonAffecter_Click(object sender, EventArgs e)
         {
             string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
-            Colis LeColisClient = Colis.ReturnColis(idColis);
-            Client LeClientColis = Colis.ReturnColis(idColis).getLeClient();
+            Colis LeColisClient = Colis.ReturnColis(int.Parse(idColis));
+            Client LeClientColis = Colis.ReturnColis(int.Parse(idColis)).getLeClient();
             List<Boxs> lesBoxsPresClient = Boxs.getBoxsTrieesDistance(LeClientColis);
             foreach (Boxs laBoxeLaPlusProche in lesBoxsPresClient)
             {
@@ -77,7 +77,7 @@ namespace Scance_23112020
         private void buttonNAffecter_Click(object sender, EventArgs e)
         {
             string idColis = dataGriedViewColis.SelectedRows[0].Cells[0].Value.ToString();
-            Colis.ReturnColis(idColis).Etat = "Non Affecté";
+            Colis.ReturnColis(int.Parse(idColis)).Etat = "Non Affecté";
         }
         private void ColisForm_Load(object sender, EventArgs e)
         {

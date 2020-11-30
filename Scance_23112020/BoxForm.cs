@@ -57,7 +57,7 @@ namespace Scance_23112020
                 {
                     Villes laVille = null;
                     foreach (Villes uneVille in Villes.CollClassVille)  if (cbbVilleBox.Text == uneVille.Nom) laVille = uneVille;
-                    new Boxs(int.Parse(txtIDBox.Text), new Adresses(laVille, txtAddressBox.Text, Utilitaire.retourNouvelleId(Adresses.CollClasseAdresse)));
+                    new Boxs(new Adresses(laVille, txtAddressBox.Text));
                 }
                 else
                 {

@@ -22,7 +22,7 @@ namespace Scance_23112020.Model
         }
 		public Colis(string unVolume, Client unClient)
 		{
-			Id = Utilitaire.retourNouvelleId(collLesColis);
+			Id = Utilitaire.RetourNouvelleId(collLesColis);
 			Volume = unVolume;
 			LeClient = unClient;
 			collLesColis.Add(this);
@@ -38,10 +38,10 @@ namespace Scance_23112020.Model
 
 		#region Methodes
 		public Client getLeClient() { return _leClient; }
-		public string getLId() { return _id; }
+		public int getLId() { return _id; }
 		public string getLeVolume() { return _volume; }
 		public string getLetat() { return _etat; }
-		public static Colis ReturnColis(string unId)
+		public static Colis ReturnColis(int unId)
 		{
 			foreach (Colis unColis in collLesColis)
 			{
