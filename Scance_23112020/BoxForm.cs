@@ -25,6 +25,7 @@ namespace Scance_23112020
             cbbBox.DataSource = new BindingSource(Boxs.DictionnaireBoxs, null);
             cbbBox.DisplayMember = "Value";
             cbbBox.ValueMember = "Key";
+            cbbBox.Items.Add("Nouvelle Box");
             foreach (Villes uneVille in Villes.CollClassVille) cbbVilleBox.Items.Add(uneVille);
         }
         private void cbbBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,10 +46,6 @@ namespace Scance_23112020
                     txtIDBox.Text = unBoxs.Id;
                 }
             }
-        }
-        private void cbbVilleBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
         private void btnCreeBox_Click(object sender, EventArgs e)
         {

@@ -98,6 +98,7 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Adresses.cs" />
     <Compile Include="Model\Boxs.cs" />
     <Compile Include="Model\Compartiments.cs" />
     <Compile Include="Model\Livreurs.cs" />

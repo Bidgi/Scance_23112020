@@ -22,11 +22,11 @@ namespace Scance_23112020
         private void Menu_Load(object sender, EventArgs e)
         {
             #region NewVille
-            Villes lannion = new Villes(1, "Lannion", 22300);
-            Villes rennes = new Villes(2, "Renne", 35000);
-            Villes brest = new Villes(3, "Brest", 29200);
-            Villes stBrieux = new Villes(4, "StBrieux", 22000);
-            Villes paris = new Villes(5, "Paris", 75000);
+            Villes lannion = new Villes(1, "Lannion", 22300, "France");
+            Villes rennes = new Villes(2, "Renne", 35000, "France");
+            Villes brest = new Villes(3, "Brest", 29200, "France");
+            Villes stBrieux = new Villes(4, "StBrieux", 22000, "France");
+            Villes paris = new Villes(5, "Paris", 75000, "France");
             #endregion
 
             #region NewBoxs

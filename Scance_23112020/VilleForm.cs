@@ -26,6 +26,7 @@ namespace Scance_23112020
                 textBoxId.Text = Villes.retourNouvelleId().ToString();
                 textBoxVille.Text = "";
                 textBoxCP.Text = "";
+                txtPays.Text = "";
             }
             else
             {
@@ -38,6 +39,7 @@ namespace Scance_23112020
                         textBoxId.Text = uneVille.Id.ToString();
                         textBoxVille.Text = uneVille.Nom;
                         textBoxCP.Text = uneVille.Codepostal.ToString();
+                        txtPays.Text = uneVille.Pays;
                         laVille = uneVille;
                     }
                 }
@@ -49,7 +51,6 @@ namespace Scance_23112020
                 foreach (Boxs uneBox in laVille.LesBox)
                 {
                     data.Rows.Add(uneBox.Id, uneBox.Adresse);
-
                 }
                 dataGridViewBoxs.DataSource = data;
             }
@@ -63,13 +64,21 @@ namespace Scance_23112020
                 labelErreur.Visible = false;
                 if (textBoxVille.Text != "")
                 {
-                    if (textBoxCP.Text != "")
+                    if (txtPays.Text != "")
                     {
-                        Villes unVille = new Villes(int.Parse(textBoxId.Text),textBoxVille.Text, int.Parse(textBoxCP.Text));
+                        if (textBoxCP.Text != "")
+                        {
+                            new Villes(int.Parse(textBoxId.Text), textBoxVille.Text, int.Parse(textBoxCP.Text), txtPays.Text);
+                        }
+                        else
+                        {
+                            labelErreur.Text = "Le code postale n'est pas valide.";
+                            labelErreur.Visible = true;
+                        }
                     }
                     else
                     {
-                        labelErreur.Text = "Le code postale n'est pas valide.";
+                        labelErreur.Text = "Le nom du pays n'est pas valide";
                         labelErreur.Visible = true;
                     }
                 }
