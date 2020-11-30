@@ -68,7 +68,7 @@ namespace Scance_23112020
                     {
                         if (textBoxCP.Text != "")
                         {
-                            new Villes(int.Parse(textBoxId.Text), textBoxVille.Text, int.Parse(textBoxCP.Text), txtPays.Text);
+                            new Villes(textBoxVille.Text, int.Parse(textBoxCP.Text), txtPays.Text);
                             comboBoxVille.Refresh();
                             foreach (Client unClient in Client.CollLesClients)
                             {

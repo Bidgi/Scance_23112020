@@ -117,9 +117,9 @@ namespace Scance_23112020
         {
             foreach (Colis unColis in compartiments.LesColis)
             {
-                if(unColis.Id == lbColis.SelectedItem.ToString())
+                if(unColis.Id.ToString() == lbColis.SelectedItem.ToString())
                 {
-                    txtIdColis.Text = unColis.Id;
+                    txtIdColis.Text = unColis.Id.ToString();
                     txtEtatColis.Text = unColis.Etat;
                     txtVolumeColis.Text = unColis.Volume;
                     break;
