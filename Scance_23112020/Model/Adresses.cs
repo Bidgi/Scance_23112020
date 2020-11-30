@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 using System.IO;
 using System.Net;
 using System.Data;
+using System.Device.Location;
 
 namespace Scance_23112020.Model
 {
-    class Adresses
+    public class Adresses
     {
         #region Attributs
         public static List<Adresses> CollClasseAdresse = new List<Adresses>();
         private Villes _laVille;
         private string _adresse;
-        private double _lat;
-        private double _lng;
+        private GeoCoordinate _geoCoordinate;
         private int _id;
         #endregion
 
@@ -25,9 +25,12 @@ namespace Scance_23112020.Model
         {
             LaVille = laVille;
             Adresse = adresse;
-            List<double> latLng = GetLatLong(LaVille.Nom + " " + LaVille.Codepostal + " " + Adresse + "," + LaVille.Pays);
-            Lat = latLng.ElementAt(0);
-            Lng = latLng.ElementAt(1);
+            if (adresse != "non renseigner")
+            {
+                List<double> latLng = GetLatLong(LaVille.Nom + " " + LaVille.Codepostal + " " + Adresse + "," + LaVille.Pays);
+                GeoCoordinate = new GeoCoordinate(latLng.ElementAt(0), latLng.ElementAt(1));
+            }
+            else GeoCoordinate = new GeoCoordinate();
             Id = id;
             CollClasseAdresse.Add(this);
         }
@@ -36,8 +39,7 @@ namespace Scance_23112020.Model
         #region Getters Setters
         public Villes LaVille { get => _laVille; set => _laVille = value; }
         public string Adresse { get => _adresse; set => _adresse = value; }
-        public double Lat { get => _lat; set => _lat = value; }
-        public double Lng { get => _lng; set => _lng = value; }
+        public GeoCoordinate GeoCoordinate { get => _geoCoordinate; set => _geoCoordinate = value; }
         public int Id { get => _id; set => _id = value; }
         #endregion
 
@@ -63,6 +65,14 @@ namespace Scance_23112020.Model
                     return GeoCordonnee;
                 }
             }
+        }
+        public static int retourNouvelleId()
+        {
+            return CollClasseAdresse.Count + 1;
+        }
+        public void NouvelleAdresse(string newAdresse)
+        {
+            this.GeoCoordinate = new GeoCoordinate(GetLatLong(newAdresse).ElementAt(0), GetLatLong(newAdresse).ElementAt(1));
         }
         #endregion
     }

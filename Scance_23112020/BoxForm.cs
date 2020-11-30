@@ -42,7 +42,7 @@ namespace Scance_23112020
             {
                 if(cbbBox.SelectedItem.ToString() == unBoxs.Id)
                 {
-                    txtAddressBox.Text = unBoxs.Adresse;
+                    txtAddressBox.Text = unBoxs.Adresse.Adresse;
                     txtIDBox.Text = unBoxs.Id;
                 }
             }
@@ -55,7 +55,9 @@ namespace Scance_23112020
                 labelErreur.Visible = false;
                 if (txtAddressBox.Text != "")
                 {
-                   new Boxs(txtIDBox.Text, txtAddressBox.Text, new GeoCoordinate());
+                    Villes laVille = null;
+                    foreach (Villes uneVille in Villes.CollClassVille)  if (cbbVilleBox.Text == uneVille.Nom) laVille = uneVille;
+                   new Boxs(txtIDBox.Text, new Adresses(laVille, txtAddressBox.Text, Adresses.retourNouvelleId()));
                 }
                 else
                 {
@@ -76,10 +78,7 @@ namespace Scance_23112020
             {
                 if (unBoxs.Id == txtIDBox.Text)
                 {
-                    if (txtAddressBox.Text != "")
-                    {
-                        unBoxs.Adresse = txtAddressBox.Text;
-                    }
+                    if (txtAddressBox.Text != "") unBoxs.Adresse.NouvelleAdresse(txtAddressBox.Text);
                     else
                     {
                         labelErreur.Text = "L'adresse n'est pas valide";
