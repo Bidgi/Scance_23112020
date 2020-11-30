@@ -94,8 +94,8 @@ namespace Scance_23112020
                 txtNombrePetitColis.Text = petitColis.ToString();
                 txtNomClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Nom;
                 txtPrenomClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Prenom;
-                txtVilleClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Ville.Nom;
-                txtAdresseClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Adresse;
+                txtVilleClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Adresse.LaVille.Nom;
+                txtAdresseClient.Text = compartiments.LesColis.ElementAt(0).LeClient.Adresse.Adresse;
                 lbColis.SelectedIndex = 0;
             }
             else
