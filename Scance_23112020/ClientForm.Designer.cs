@@ -45,8 +45,8 @@
             this.buttonCréer = new System.Windows.Forms.Button();
             this.buttonModifier = new System.Windows.Forms.Button();
             this.buttonEffacer = new System.Windows.Forms.Button();
-            this.labelCoupon = new System.Windows.Forms.Label();
-            this.textBoxCoupon = new System.Windows.Forms.TextBox();
+            this.label = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
             this.labelErreur = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -159,7 +159,7 @@
             this.comboBoxVille.FormattingEnabled = true;
             this.comboBoxVille.Location = new System.Drawing.Point(115, 186);
             this.comboBoxVille.Name = "comboBoxVille";
-            this.comboBoxVille.Size = new System.Drawing.Size(121, 21);
+            this.comboBoxVille.Size = new System.Drawing.Size(141, 21);
             this.comboBoxVille.TabIndex = 16;
             // 
             // dataGridView1
@@ -169,6 +169,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(432, 122);
             this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // buttonCréer
             // 
@@ -198,22 +199,23 @@
             this.buttonEffacer.TabIndex = 20;
             this.buttonEffacer.Text = "Effacer";
             this.buttonEffacer.UseVisualStyleBackColor = true;
+            this.buttonEffacer.Click += new System.EventHandler(this.buttonEffacer_Click);
             // 
-            // labelCoupon
+            // label
             // 
-            this.labelCoupon.AutoSize = true;
-            this.labelCoupon.Location = new System.Drawing.Point(65, 237);
-            this.labelCoupon.Name = "labelCoupon";
-            this.labelCoupon.Size = new System.Drawing.Size(47, 13);
-            this.labelCoupon.TabIndex = 21;
-            this.labelCoupon.Text = "Coupon:";
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(65, 237);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(47, 13);
+            this.label.TabIndex = 21;
+            this.label.Text = "Coupon:";
             // 
-            // textBoxCoupon
+            // textBox
             // 
-            this.textBoxCoupon.Location = new System.Drawing.Point(118, 232);
-            this.textBoxCoupon.Name = "textBoxCoupon";
-            this.textBoxCoupon.Size = new System.Drawing.Size(100, 20);
-            this.textBoxCoupon.TabIndex = 22;
+            this.textBox.Location = new System.Drawing.Point(170, 234);
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(45, 20);
+            this.textBox.TabIndex = 22;
             // 
             // labelErreur
             // 
@@ -232,8 +234,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 406);
             this.Controls.Add(this.labelErreur);
-            this.Controls.Add(this.textBoxCoupon);
-            this.Controls.Add(this.labelCoupon);
+            this.Controls.Add(this.textBox);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.buttonEffacer);
             this.Controls.Add(this.buttonModifier);
             this.Controls.Add(this.buttonCréer);
@@ -279,8 +281,8 @@
         private System.Windows.Forms.Button buttonCréer;
         private System.Windows.Forms.Button buttonModifier;
         private System.Windows.Forms.Button buttonEffacer;
-        private System.Windows.Forms.Label labelCoupon;
-        private System.Windows.Forms.TextBox textBoxCoupon;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.TextBox textBox;
         private System.Windows.Forms.Label labelErreur;
     }
 }

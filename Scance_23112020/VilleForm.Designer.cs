@@ -107,6 +107,7 @@
             this.buttonEffacer.TabIndex = 6;
             this.buttonEffacer.Text = "Effacer";
             this.buttonEffacer.UseVisualStyleBackColor = true;
+            this.buttonEffacer.Click += new System.EventHandler(this.buttonEffacer_Click);
             // 
             // dataGridViewBoxs
             // 

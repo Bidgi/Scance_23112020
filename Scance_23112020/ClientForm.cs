@@ -40,6 +40,28 @@ namespace Scance_23112020
                     textBoxAdresse.Text = unClient.getLAdresse();
                     comboBoxVille.Text = unClient.getLaVille().Nom;
                     textBoxCP.Text = unClient.getLaVille().Codepostal.ToString();
+                    dataGridView1.Refresh();
+                    foreach (Colis unColis in Colis.collLesColis)
+                    {
+                        data.Rows.Add(unColis.getLId(), unColis.getLeVolume(), unColis.getLeClient().getLeNom());
+                    }
+                    dataGridView1.DataSource = data;
+                    foreach ( Client_Pro unClientPro in Client_Pro.collLesClientPro)
+                    {
+                        if (unClientPro.getLId() == unClient.getLId())
+                        {
+                            label.Text = "Dernière remise:";
+                            textBox.Text = unClientPro.Remise.ToString();
+                        }
+                    }
+                    foreach (Client_Indi unClientIndi in Client_Indi.collLesClientIndi)
+                    {
+                        if (unClientIndi.getLId() == unClient.getLId())
+                        {
+                            label.Text = "Coupon:";
+                            textBox.Text = unClientIndi.Coupon.ToString();
+                        }
+                    }
                 }
             }
         }
@@ -68,6 +90,11 @@ namespace Scance_23112020
                                 {
                                     labelErreur.Visible = false;
                                     Client unClient = new Client(int.Parse(textBoxID.Text), textBoxNom.Text, textBoxPrenom.Text, textBoxAdresse.Text, Villes.retourVilleId(int.Parse(comboBoxVille.Text)));
+                                    comboBoxClient.Refresh();
+                                    foreach (Client unClientRefresh in Client.CollLesClients)
+                                    {
+                                        comboBoxClient.Items.Add(unClientRefresh.Id + "-" + unClientRefresh.Nom);
+                                    }
                                 }
                                 else
                                 {
@@ -127,6 +154,11 @@ namespace Scance_23112020
                                         unClient.Prenom = textBoxPrenom.Text;
                                         unClient.Adresse = textBoxAdresse.Text;
                                         unClient.Ville = Villes.retourVilleId(int.Parse(comboBoxVille.Text));
+                                        comboBoxClient.Refresh();
+                                        foreach (Client unClientRefresh in Client.CollLesClients)
+                                        {
+                                            comboBoxClient.Items.Add(unClientRefresh.Id + "-" + unClientRefresh.Nom);
+                                        }
                                     }
                                 }
                             }
@@ -161,5 +193,39 @@ namespace Scance_23112020
             } 
         }
 
+        private void buttonEffacer_Click(object sender, EventArgs e)
+        {
+            foreach (Client unClient in Client.CollLesClients)
+            {
+                if (unClient.Id == int.Parse(textBoxID.Text))
+                {
+                    Client.CollLesClients.Remove(unClient);
+                    foreach(Client_Pro unClientPro in Client_Pro.collLesClientPro)
+                    {
+                        if (unClientPro.Id == unClient.Id)
+                        {
+                            Client_Pro.collLesClientPro.Remove(unClientPro);
+                        }
+                    }
+                    foreach (Client_Indi unClientIndi in Client_Indi.collLesClientIndi)
+                    {
+                        if (unClientIndi.Id == unClient.Id)
+                        {
+                            Client_Indi.collLesClientIndi.Remove(unClientIndi);
+                        }
+                    }
+                }
+            }
+            comboBoxClient.Refresh();
+            foreach (Client unClientRefresh in Client.CollLesClients)
+            {
+                comboBoxClient.Items.Add(unClientRefresh.Id + "-" + unClientRefresh.Nom);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

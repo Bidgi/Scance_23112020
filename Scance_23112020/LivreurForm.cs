@@ -69,5 +69,39 @@ namespace Scance_23112020
             Program.menu.Visible = true;
             this.Close();
         }
+
+        private void btnEffacer_Click(object sender, EventArgs e)
+        {
+            foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
+            {
+                if (unLivreur.Id == txtID.Text)
+                {
+                    Livreurs.CollClassLivreur.Remove(unLivreur);
+                }
+            }
+            cbbLivreur.Refresh();
+            foreach (Livreurs unLivreurRefresh in Livreurs.CollClassLivreur)
+            {
+                cbbLivreur.Items.Add(unLivreurRefresh.Nom);
+            }
+        }
+
+        private void btnModifier_Click(object sender, EventArgs e)
+        {
+            cbbLivreur.Refresh();
+            foreach (Livreurs unLivreurRefresh in Livreurs.CollClassLivreur)
+            {
+                cbbLivreur.Items.Add(unLivreurRefresh.Nom);
+            }
+        }
+
+        private void btnCree_Click(object sender, EventArgs e)
+        {
+            cbbLivreur.Refresh();
+            foreach (Livreurs unLivreurRefresh in Livreurs.CollClassLivreur)
+            {
+                cbbLivreur.Items.Add(unLivreurRefresh.Nom);
+            }
+        }
     }
 }

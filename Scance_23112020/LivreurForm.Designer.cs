@@ -77,6 +77,7 @@
             this.btnEffacer.TabIndex = 29;
             this.btnEffacer.Text = "Effacer";
             this.btnEffacer.UseVisualStyleBackColor = true;
+            this.btnEffacer.Click += new System.EventHandler(this.btnEffacer_Click);
             // 
             // btnModifier
             // 
@@ -86,6 +87,7 @@
             this.btnModifier.TabIndex = 28;
             this.btnModifier.Text = "Modifier";
             this.btnModifier.UseVisualStyleBackColor = true;
+            this.btnModifier.Click += new System.EventHandler(this.btnModifier_Click);
             // 
             // btnCree
             // 
@@ -95,6 +97,7 @@
             this.btnCree.TabIndex = 27;
             this.btnCree.Text = "Créer";
             this.btnCree.UseVisualStyleBackColor = true;
+            this.btnCree.Click += new System.EventHandler(this.btnCree_Click);
             // 
             // txtNom
             // 

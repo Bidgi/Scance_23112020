@@ -66,6 +66,11 @@ namespace Scance_23112020
                     if (textBoxCP.Text != "")
                     {
                         Villes unVille = new Villes(int.Parse(textBoxId.Text),textBoxVille.Text, int.Parse(textBoxCP.Text));
+                        comboBoxVille.Refresh();
+                        foreach (Client unClient in Client.CollLesClients)
+                        {
+                            comboBoxVille.Items.Add(unClient.Id + "-" + unClient.Nom);
+                        }
                     }
                     else
                     {
@@ -98,6 +103,11 @@ namespace Scance_23112020
                         {
                             uneVille.Nom = textBoxVille.Text;
                             uneVille.Codepostal = int.Parse(textBoxCP.Text);
+                            comboBoxVille.Refresh();
+                            foreach (Client unClient in Client.CollLesClients)
+                            {
+                                comboBoxVille.Items.Add(unClient.Id + "-" + unClient.Nom);
+                            }
                         }
                         else
                         {
@@ -142,6 +152,22 @@ namespace Scance_23112020
         private void textBoxId_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonEffacer_Click(object sender, EventArgs e)
+        {
+            foreach (Villes uneVille in Villes.CollClassVille)
+            {
+                if (uneVille.Id == int.Parse(textBoxId.Text))
+                {
+                    Villes.CollClassVille.Remove(uneVille);
+                }
+            }
+            comboBoxVille.Refresh();
+            foreach (Client unClient in Client.CollLesClients)
+            {
+                comboBoxVille.Items.Add(unClient.Id + "-" + unClient.Nom);
+            }
         }
     }
 }

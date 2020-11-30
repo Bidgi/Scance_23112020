@@ -10,6 +10,7 @@ namespace Scance_23112020.Model
     public class Client_Indi : Client
     {
         #region Attributs
+        public static List<Client_Indi> collLesClientIndi = new List<Client_Indi>();
         private int _coupon;
         #endregion
 

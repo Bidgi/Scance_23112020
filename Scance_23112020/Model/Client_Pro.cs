@@ -10,6 +10,7 @@ namespace Scance_23112020.Model
     public class Client_Pro : Client
     {
         #region Attributs
+        public static List<Client_Pro> collLesClientPro = new List<Client_Pro>();
         private double _volumeNegocie;
         private double _remise;
         #endregion
