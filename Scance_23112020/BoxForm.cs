@@ -40,10 +40,10 @@ namespace Scance_23112020
             dataGridView1.DataSource = dt;
             foreach (Boxs unBoxs in VilleForm.laVille.LesBox)
             {
-                if(cbbBox.SelectedItem.ToString() == unBoxs.Id)
+                if(cbbBox.SelectedItem.ToString() == unBoxs.Id.ToString())
                 {
                     txtAddressBox.Text = unBoxs.Adresse.Adresse;
-                    txtIDBox.Text = unBoxs.Id;
+                    txtIDBox.Text = unBoxs.Id.ToString();
                 }
             }
         }
@@ -57,7 +57,7 @@ namespace Scance_23112020
                 {
                     Villes laVille = null;
                     foreach (Villes uneVille in Villes.CollClassVille)  if (cbbVilleBox.Text == uneVille.Nom) laVille = uneVille;
-                   new Boxs(txtIDBox.Text, new Adresses(laVille, txtAddressBox.Text, Adresses.retourNouvelleId()));
+                    new Boxs(int.Parse(txtIDBox.Text), new Adresses(laVille, txtAddressBox.Text, Utilitaire.retourNouvelleId(Adresses.CollClasseAdresse)));
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace Scance_23112020
         {
             foreach (Boxs unBoxs in VilleForm.laVille.LesBox)
             {
-                if (unBoxs.Id == txtIDBox.Text)
+                if (unBoxs.Id.ToString() == txtIDBox.Text)
                 {
                     if (txtAddressBox.Text != "") unBoxs.Adresse.NouvelleAdresse(txtAddressBox.Text);
                     else

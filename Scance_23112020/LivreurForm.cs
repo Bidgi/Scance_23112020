@@ -81,7 +81,7 @@ namespace Scance_23112020
         {
             foreach (Livreurs unLivreur in Livreurs.CollClassLivreur)
             {
-                if (unLivreur.Id == txtID.Text)
+                if (unLivreur.Id.ToString() == txtID.Text)
                 {
                     Livreurs.CollClassLivreur.Remove(unLivreur);
                 }

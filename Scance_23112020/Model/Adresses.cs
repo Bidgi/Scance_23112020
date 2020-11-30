@@ -66,10 +66,6 @@ namespace Scance_23112020.Model
                 }
             }
         }
-        public static int retourNouvelleId()
-        {
-            return CollClasseAdresse.Count + 1;
-        }
         public void NouvelleAdresse(string newAdresse)
         {
             this.GeoCoordinate = new GeoCoordinate(GetLatLong(newAdresse).ElementAt(0), GetLatLong(newAdresse).ElementAt(1));

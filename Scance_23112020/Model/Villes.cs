@@ -43,15 +43,6 @@ namespace Scance_23112020.Model
         {
             this.LesBox.Add(unBoxs);
         }
-        public static int retourNouvelleId()
-        {
-            int x = 0;
-            foreach (Villes uneVilles in CollClassVille)
-            {
-                x++;
-            }
-            return x;
-        }
         public static Villes retourVilleId(int uneId)
         {
             Villes uneVilleRetour = null;

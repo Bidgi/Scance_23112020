@@ -12,7 +12,6 @@ namespace Scance_23112020.Model
         public static int retourNouvelleId<T>(List<T> uneListe)
         {
             int x = 0;
-
             for (int i = 0; i < uneListe.Count; i++)
             {
                 PropertyInfo property = uneListe.ElementAt(i).GetType().GetProperty("Id");

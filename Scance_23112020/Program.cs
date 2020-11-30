@@ -23,16 +23,16 @@ namespace Scance_23112020
             #endregion
 
             #region NewBoxs
-            Boxs lannionboxs1 = new Boxs("1", new Adresses(lannion, "non renseigner", 0));
-            Boxs lannionboxs2 = new Boxs("2", new Adresses(lannion, "non renseigner", 1));
-            Boxs rennesboxs1 = new Boxs("3", new Adresses(lannion, "non renseigner", 2));
-            Boxs rennesboxs2 = new Boxs("4", new Adresses(lannion, "non renseigner", 3));
-            Boxs brestboxs1 = new Boxs("5", new Adresses(lannion, "non renseigner", 4));
-            Boxs brestboxs2 = new Boxs("6", new Adresses(lannion, "non renseigner", 5));
-            Boxs stBrieuxboxs1 = new Boxs("7", new Adresses(lannion, "non renseigner", 6));
-            Boxs stBrieuxboxs2 = new Boxs("8", new Adresses(lannion, "non renseigner", 7));
-            Boxs parisboxs1 = new Boxs("9", new Adresses(lannion, "non renseigner", 8));
-            Boxs parisboxs2 = new Boxs("10", new Adresses(lannion, "non renseigner", 9));
+            Boxs lannionboxs1 = new Boxs(1, new Adresses(lannion, "non renseigner", 0));
+            Boxs lannionboxs2 = new Boxs(2, new Adresses(lannion, "non renseigner", 1));
+            Boxs rennesboxs1 = new Boxs(3, new Adresses(lannion, "non renseigner", 2));
+            Boxs rennesboxs2 = new Boxs(4, new Adresses(lannion, "non renseigner", 3));
+            Boxs brestboxs1 = new Boxs(5, new Adresses(lannion, "non renseigner", 4));
+            Boxs brestboxs2 = new Boxs(6, new Adresses(lannion, "non renseigner", 5));
+            Boxs stBrieuxboxs1 = new Boxs(7, new Adresses(lannion, "non renseigner", 6));
+            Boxs stBrieuxboxs2 = new Boxs(8, new Adresses(lannion, "non renseigner", 7));
+            Boxs parisboxs1 = new Boxs(9, new Adresses(lannion, "non renseigner", 8));
+            Boxs parisboxs2 = new Boxs(10, new Adresses(lannion, "non renseigner", 9));
             #endregion
 
             #region AddBox
@@ -133,8 +133,8 @@ namespace Scance_23112020
             #endregion
 
             #region NewClient
-            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", new Adresses(pléhédel, "4 rue de l'argoat", Adresses.retourNouvelleId()), 0, 0);
-            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", new Adresses(lannion, "37 Rue des Cordiers", Adresses.retourNouvelleId()), 0);
+            Client_Pro client_Pro = new Client_Pro(1, "girardin", "raoul", new Adresses(pléhédel, "4 rue de l'argoat", Utilitaire.retourNouvelleId(Adresses.CollClasseAdresse)), 0, 0);
+            Client_Indi client_Indi = new Client_Indi(2, "jezequel", "ewen", new Adresses(lannion, "37 Rue des Cordiers", Utilitaire.retourNouvelleId(Adresses.CollClasseAdresse)), 0);
             #endregion
 
             #region NewColis
@@ -176,8 +176,8 @@ namespace Scance_23112020
             #endregion
 
             #region NewLivreur
-            Livreurs l1 = new Livreurs("1", "Malo");
-            Livreurs l2 = new Livreurs("2", "Galaad");
+            Livreurs l1 = new Livreurs(1, "Malo");
+            Livreurs l2 = new Livreurs(2, "Galaad");
             #endregion
 
             Application.EnableVisualStyles();
